@@ -61,6 +61,7 @@ const AppContent = () => {
     <>
       {loading && <Loader />}
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <ScrollToTop />
       <main className="relative">
         {location.pathname === "/blogs" && (
           <img
@@ -140,7 +141,6 @@ const AppContent = () => {
         </Routes>
       </main>
       <Footer />
-      <ScrollToTop />
       <OpenAtTop />
     </>
   );

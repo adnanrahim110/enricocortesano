@@ -6,7 +6,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === "100%") {
+      if (window.scrollY > 100) {
         setIsScrollDown(true);
       } else {
         setIsScrollDown(false);
@@ -28,7 +28,7 @@ const ScrollToTop = () => {
   return (
     <div
       onClick={scrollToTop}
-      className={`fixed z-[100] bottom-1 right-0 bg-gray-800 border-2 border-primary-100 hover:bg-black text-primary transition-all duration-200 ease-linear cursor-pointer group ${
+      className={`fixed z-[1001] bottom-1 right-0 bg-gray-800 border-2 border-primary-100 hover:bg-black text-primary transition-all duration-200 ease-linear cursor-pointer group ${
         isScrollDown
           ? "opacity-100 visible translate-y-0"
           : "opacity-0 invisible translate-y-24"
