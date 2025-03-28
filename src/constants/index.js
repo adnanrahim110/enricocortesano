@@ -1,6 +1,5 @@
-import { video } from "framer-motion/client";
 import { FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from "react-icons/fa6";
-import { blogs_1, blogs_2, blogs_4, blogs_5, blogs_6, blogs_7, blogs_8 } from "../assets";
+import { blogs_banana_bread_1, blogs_banana_bread_2, blogs_banana_bread_3, blogs_come_fare_una_pizza_napoletana_1, blogs_come_fare_una_pizza_napoletana_10, blogs_come_fare_una_pizza_napoletana_11, blogs_come_fare_una_pizza_napoletana_12, blogs_come_fare_una_pizza_napoletana_13, blogs_come_fare_una_pizza_napoletana_14, blogs_come_fare_una_pizza_napoletana_15, blogs_come_fare_una_pizza_napoletana_16, blogs_come_fare_una_pizza_napoletana_17, blogs_come_fare_una_pizza_napoletana_2, blogs_come_fare_una_pizza_napoletana_3, blogs_come_fare_una_pizza_napoletana_4, blogs_come_fare_una_pizza_napoletana_5, blogs_come_fare_una_pizza_napoletana_6, blogs_come_fare_una_pizza_napoletana_7, blogs_come_fare_una_pizza_napoletana_8, blogs_come_fare_una_pizza_napoletana_9, blogs_french_baguette_1, blogs_french_baguette_2, blogs_french_baguette_3, blogs_french_baguette_4, blogs_french_baguette_5, blogs_french_baguette_6, blogs_french_baguette_7, blogs_french_baguette_8, blogs_frittata_di_maccheroni_1, blogs_frittata_di_maccheroni_2, blogs_frittata_di_maccheroni_3, blogs_genovese_1, blogs_genovese_2, blogs_genovese_3, blogs_l_arte_del_pane_1, blogs_l_arte_del_pane_10, blogs_l_arte_del_pane_11, blogs_l_arte_del_pane_2, blogs_l_arte_del_pane_3, blogs_l_arte_del_pane_4, blogs_l_arte_del_pane_5, blogs_l_arte_del_pane_6, blogs_l_arte_del_pane_7, blogs_l_arte_del_pane_8, blogs_l_arte_del_pane_9, blogs_la_pastiera_napoletana_1, blogs_la_pastiera_napoletana_2, blogs_la_pastiera_napoletana_3, blogs_la_pastiera_napoletana_4, blogs_la_pastiera_napoletana_5, blogs_la_pastiera_napoletana_6, blogs_la_pastiera_napoletana_7, blogs_la_pastiera_napoletana_8, blogs_pane_rustico_in_dutch_oven_1, blogs_pane_rustico_in_dutch_oven_2, blogs_panzarotti_napoletani_1, blogs_panzarotti_napoletani_2, blogs_panzarotti_napoletani_3, blogs_panzarotti_napoletani_4, blogs_pasta_e_patate_napoletana_1, blogs_pasta_e_patate_napoletana_2, blogs_spaghetti_alla_puttanesca_1, blogs_spaghetti_alla_puttanesca_2, blogs_spaghetti_alla_puttanesca_3, blogs_spaghetti_pomodoro_e_basilico_1, blogs_spaghetti_pomodoro_e_basilico_2, blogs_spaghetti_pomodoro_e_basilico_3, blogs_spaghetti_pomodoro_e_basilico_4, blogs_tortano_napoletano_1, blogs_tortano_napoletano_10, blogs_tortano_napoletano_11, blogs_tortano_napoletano_2, blogs_tortano_napoletano_3, blogs_tortano_napoletano_4, blogs_tortano_napoletano_5, blogs_tortano_napoletano_6, blogs_tortano_napoletano_7, blogs_tortano_napoletano_8, blogs_tortano_napoletano_9, blogs_trenette_funghi_e_piselli_1, blogs_trenette_funghi_e_piselli_2, blogs_trenette_funghi_e_piselli_3, blogs_trenette_funghi_e_piselli_4, categories_dolci_1, categories_fritto_1, categories_riflessioni_1, categories_riflessioni_3, categories_riflessioni_4 } from "../assets";
 
 export const socials = [
   {
@@ -43,12 +42,12 @@ export const navigation = [
     url: '/book'
   },
   {
-    title: 'Blogs',
-    url: '/blogs'
-  },
-  {
     title: 'Videos',
     url: '/videos'
+  },
+  {
+    title: 'Blogs / Press Release',
+    url: '/blogs-pressreleases'
   },
   {
     title: 'Contact',
@@ -88,10 +87,288 @@ export const navigation = [
       }
     ]
   },
+];
+
+export const pressreleases = [
   {
-    title: 'Press Releases',
-    url: '/press-release'
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+  {
+    img: "",
+    url: "",
+  },
+];
+
+export const categoriesList = [
+  {
+    title: 'Sauces',
+    url: '/sughi',
+    img: blogs_spaghetti_alla_puttanesca_1,
+    rows: [
+      {
+        title: "spaghetti alla puttanesca",
+        url: "/blogs/spaghetti-alla-puttanesca",
+        bgColor: "#4bd1a0",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_spaghetti_alla_puttanesca_1],
+        text: "Questo sugo è uno dei più antichi della cucina Napoletana. Si dice che il nome derivi dal fatto che le prostitute dell'epoca lo cucinassero nell'attesa dei loro client.",
+      },
+      {
+        title: "Pasta e patate Napoletana",
+        url: "/blogs/pasta-e-patate-napoletana",
+        bgColor: "#FCF8ED",
+        titleColor: "#90B679",
+        textcolor: "#000",
+        imgs: [blogs_pasta_e_patate_napoletana_1, blogs_pasta_e_patate_napoletana_2],
+        text: "Questa è una ricetta che si tramanda da Nonna a Madre in tutte le famigli Napoletane, quindi ogni famiglia ha la sua con piccoli cambiamenti, questa è la ricetta della miaFamigli."
+      },
+      {
+        title: "genovese",
+        url: "/blogs/genovese",
+        bgColor: "#DEB940",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_genovese_1],
+        text: "Si il nome è Genovese, mail piatto e Napoletano. Questo è il mio piatto preferito."
+      },
+      {
+        title: "Trenette Funghi e Piselli",
+        url: "/blogs/trenette-funghi-e-piselli",
+        bgColor: "#FCF8ED",
+        titleColor: "#90B679",
+        textcolor: "#000",
+        imgs: [blogs_trenette_funghi_e_piselli_1, blogs_trenette_funghi_e_piselli_2],
+        text: "Ricetta saporitissima, con un connubio perfetto di sapori."
+      },
+      {
+        title: "Spaghetti pomodoro e basilico",
+        url: "/blogs/spaghetti-pomodoro-e-basilico",
+        bgColor: "#C73F12",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_spaghetti_pomodoro_e_basilico_1],
+        text: "Questo è il piatto classico della cucina napoletana."
+      }
+    ]
+  },
+  {
+    title: 'Pasta',
+    url: '/pasta',
+    img: blogs_spaghetti_pomodoro_e_basilico_1,
+    rows: [
+      {
+        title: "spaghetti alla puttanesca",
+        url: "/blogs/spaghetti-alla-puttanesca",
+        bgColor: "#DEB940",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_spaghetti_alla_puttanesca_1],
+        text: "Questo sugo è uno dei più antichi della cucina Napoletana. Si dice che il nome derivi dal fatto che le prostitute dell'epoca lo cucinassero nell'attesa dei loro client.",
+      },
+      {
+        title: "Pasta e patate Napoletana",
+        url: "/blogs/pasta-e-patate-napoletana",
+        bgColor: "#FCF8ED",
+        titleColor: "#90B679",
+        textcolor: "#000",
+        imgs: [blogs_pasta_e_patate_napoletana_1, blogs_pasta_e_patate_napoletana_2],
+        text: "Questa è una ricetta che si tramanda da Nonna a Madre in tutte le famigli Napoletane, quindi ogni famiglia ha la sua con piccoli cambiamenti, questa è la ricetta della miaFamigli."
+      },
+      {
+        title: "Trenette Funghi e Piselli",
+        url: "/blogs/trenette-funghi-e-piselli",
+        bgColor: "#4BD1A0",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_trenette_funghi_e_piselli_1],
+        text: "Ricetta saporitissima, con un connubio perfetto di sapori."
+      },
+      {
+        title: "genovese",
+        url: "/blogs/genovese",
+        bgColor: "#E4B185",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_genovese_1, blogs_genovese_2],
+        text: "Si il nome è Genovese, mail piatto e Napoletano. Questo è il mio piatto preferito."
+      },
+      {
+        title: "FRITTATA DI MACCHERONI",
+        url: "/blogs/frittata-di-macheroni",
+        bgColor: "#DEB940",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_frittata_di_maccheroni_1],
+        text: "Questa è una delle tante ricette Napoletane che si utilizzava anche per svuotare il frigo dalle piccole rimanenze e questo gli da ogni volta un sapore diverso."
+      },
+      {
+        title: "Spaghetti pomodoro e basilico",
+        url: "/blogs/spaghetti-pomodoro-e-basilico",
+        bgColor: "#C73F12",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_spaghetti_pomodoro_e_basilico_1, blogs_spaghetti_pomodoro_e_basilico_2],
+        text: "Questo è il piatto classico della cucina napoletana."
+      }
+    ]
+  },
+  {
+    title: 'Pizza e Pane',
+    url: '/pizza-e-pane',
+    img: blogs_come_fare_una_pizza_napoletana_6,
+    rows: [
+      {
+        title: "come fare una pizza napoletana",
+        url: "/blogs/come-fare-una-pizza-napoletana",
+        bgColor: "#FCF8ED",
+        titleColor: "#FF4040",
+        textcolor: "#000",
+        imgs: [blogs_come_fare_una_pizza_napoletana_1, blogs_come_fare_una_pizza_napoletana_2],
+        text: "Per fare una pizza Napoletana originale sono necessarie alcune cose, prima di tutto il forno, logicamente l'ideale sarebbe un forno a legna."
+      },
+      {
+        title: "Pane Rustico in Dutch oven",
+        url: "/blogs/pan-rustico-in-dutch-oven",
+        bgColor: "#4BD1A0",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_l_arte_del_pane_6],
+        text: "Ricetta per avere un pane fragrante ed una crosta croccante ogni giorno."
+      },
+      {
+        title: "FRENCH BAGUETTE",
+        url: "/blogs/french-baguette",
+        bgColor: "#FCF8ED",
+        titleColor: "#852A0C",
+        textcolor: "#000",
+        imgs: [blogs_french_baguette_1, blogs_french_baguette_2],
+        text: "French Baguette saporitissime, crosta croccante e mollica morbida e saporita."
+      },
+      {
+        title: "Tortano napoletano",
+        subtitle: "Il Tortano tipica ciambella della tradizione Napoletana per le feste di Pasqua.",
+        url: "/blogs/tortano-napoletano",
+        bgColor: "#DEB940",
+        titleColor: "#852A0C",
+        textcolor: "#000",
+        imgs: [blogs_tortano_napoletano_1],
+        text: "Prima di tutto dobbiamo fare delle precisazioni per poter differenziare il Tortano dal Casatiello, è inutile dirvi che in ogni famiglia Napoletana c'è la propria ricetta rimandata da madre in figlia, con piccole varianti, ma la base è la stessa, per tutte e due le torte rustiche ci sono gli stessi ingredienti, ma nel casatiello di solito si mettono tra i vari ingredienti i cicoli e vengono inserite delle uova crude incatenate con una croce di pasta in superficie."
+      }
+    ]
+  },
+  {
+    title: 'Fritto',
+    url: '/fritto',
+    img: categories_fritto_1,
+    rows: [
+      {
+        title: "panzarotti napoletani",
+        url: "/blogs/panzarotti-napoletani",
+        bgColor: "#FCF8ED",
+        titleColor: "#852A0C",
+        textcolor: "#000",
+        imgs: [blogs_panzarotti_napoletani_1, blogs_panzarotti_napoletani_2],
+        text: "Questa è la mia ricetta dei panzarotti Napoletani, ricordate sarà molto difficile trovare una ricetta unica dei panzarotti Napoletani, questo perché è una di quelle ricette che le nostre madri e nonne usavano per utilizzare le piccole rimanenze nel frigo e ripulirlo, in più ogni famiglia ha la sua ricetta, in ogni caso questa è la base."
+      },
+      {
+        title: "FRITTATA DI MACCHERONI",
+        url: "/blogs/frittata-di-macheroni",
+        bgColor: "#4BD1A0",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_frittata_di_maccheroni_1],
+        text: "Questa è una delle tante ricette Napoletane che si utilizzava anche per svuotare il frigo dalle piccole rimanenze e questo gli da ogni volta un sapore diverso."
+      }
+    ]
+  },
+  {
+    title: 'Dolci',
+    url: '/dolci',
+    img: categories_dolci_1,
+    rows: [
+      {
+        title: "Banana Bread",
+        url: "/blogs/banana-bread",
+        bgColor: "#4BD1A0",
+        titleColor: "#ffffff",
+        textcolor: "#000",
+        imgs: [blogs_banana_bread_1],
+        text: "Ricetta di un tipico dolce Americano buono con la colazione del mattino."
+      },
+      {
+        title: "Pastiera Napoletana",
+        url: "/blogs/la-pastiera-napoletana",
+        bgColor: "#FCF8ED",
+        titleColor: "#BC9B5D",
+        textcolor: "#000",
+        imgs: [blogs_la_pastiera_napoletana_1, blogs_la_pastiera_napoletana_2],
+        text: "La Pastiera è il dolce napoletano per eccellenza e nonostante sia tipico della Pasqua. Le sue origini sono antichissime, e si fanno risalire al tempo dei romani, quando le sacerdotesse portavano in processione al tempio di Cerere, le offerte dei contadini, la ricotta, il grano, le uova…. Successivamente a questi elementi combinati insieme, venne aggiunto il profumo dei fiori di arancio, di cui gli alberi sono carichi in primavera, essenza che caratterizza la pastiera e la rende inconfondibile."
+      }
+    ]
+  },
+  {
+    title: 'Riflessioni',
+    url: '/riflessioni',
+    img: categories_riflessioni_1,
   }
+];
+
+export const riflessioniContent = [
+  {
+    title: "FRESCO",
+    img: categories_riflessioni_3,
+    text: [
+      "Fresco negli Stati Uniti è una definizione strana, un pesce fresco in Italia è una definizione precisa, in Italia un pesce quando si muove è fresco, oppure si può dedurre dall'occhio, deve essere molto vivo, brillante, bombato, turgido e non incavato.",
+      "Negli Stati Uniti fresco forse significa che è conservato nel ghiaccio quindi e freso, inoltre la maggior parte delle volte è senza testa quindi non si può neanche immaginare la sua freschezza.",
+      "Non parliamo dei frutti di mare, vongole e cozze vendute congelate, quindi il frutto interno è morto e la cosa più assurda, per chi cucina gli è molto difficile pulirli dalla sabbia per poterli cucinare.",
+    ],
+  },
+  {
+    title: "PANE",
+    img: blogs_l_arte_del_pane_4,
+    text: [
+      "Quale magnifica sensazione che noi Italiani abbiamo nelle vicinanze o all'interno di una panetteria, quel profumo di pane sfornato, le tante varietà di pane fragrante.",
+      "Negli Stati Uniti questo non avviene: il pane è inodore, chiuso in buste di plastica e si mantiene morbido per giorni, chi sa come mai!",
+      "Qui negli Stati Uniti non esistono panetterie, quindi il pane si compra nei supermercati; negli ultimi tempi si trovano anche pani all'Europa come ciabatta, pane Toscano etc. etc. Sono di forma diversa ma il sapore è sempre lo stesso: se chiedi spiegazioni a qualcuno, la loro risposta è che loro lo fanno così e, se gli chiedi se usano il lievito madre, ti ridono in faccia perché non capiscono di cosa stai parlando. Se vedete questo pane, non è lievitato, non ha alveoli all'interno, ma il pane più imitato e maltrattato è la baguette francese: è un lungo panino flaccido, non croccante e con il sapore dell'altro pane.",
+      "Io capisco che la maggior parte degli Americani è ignorante in materia alimentare, quindi nessuno andrà mai a lamentarsi perché poverini non hanno un metro di paragone; come possono dire che un pane non è buono se non sanno a quale compararlo?",
+    ],
+  },
+  {
+    title: "PASTA PER LA PIZZA",
+    img: categories_riflessioni_4,
+    text: [
+      "Come vi ho già detto, io non sono un cuoco e non ho fatto mai nessun corso di cucina, ma la mia scuola è stata la cucina di casa mia.",
+      "Quindi ho cominciato a cucinare dopo i trenta anni, ma negli ultimi anni ho cominciato ad approfondire e studiare con l'aiuto di testi antichi, per trovare ricette originali e anche dei cuochi contemporanei, come il grande Gualtiero Marchesi, la cui cucina ha sfornato molti allievi che sono diventati cuochi famosi.",
+      'Per quanto riguarda la pizza Napoletana voglio farvi una premessa a riguardo delle dosi: le dosi che vedete nella ricetta sono quelle originali del Disciplinare della "Associazione Verace Pizza Napoletana", ma le dosi dipendono da tante cose, dal tipo di farina, dall\'umidità del locale dove lavorerete la pasta; inoltre ogni lievito da marca a marca dà risultati diversi. Quindi armatevi di tanta pazienza e fate tante prove finché non avrete la ricetta giusta, questo è il bello della cucina.',
+      "Per quanto riguarda la pizza, il grande aiuto che ho avuto sono stati i video postati su YouTube da grandi pizzaioli, ma anche da meno noti come me, che per consigli e varie esperienze mi hanno aiutato non solo per le dosi ma anche con la manipolazione, che forse è la cosa più difficile da capire senza un'esperienza diretta. Per questo ho deciso di fare un video in modo che riassuma tutti i piccoli trucchi per fare una pizza PERFETTA da incantare i vostri commensali.",
+    ],
+  },
 ];
 
 export const blogs = [
@@ -100,8 +377,12 @@ export const blogs = [
     url: "/blogs/la-pastiera-napoletana",
     date: "12 April, 2020",
     category: "dolci",
-    img: blogs_1,
-
+    imgTop: [blogs_la_pastiera_napoletana_1],
+    imgR2: [blogs_la_pastiera_napoletana_2, blogs_la_pastiera_napoletana_3],
+    imgs: [
+      blogs_la_pastiera_napoletana_4, blogs_la_pastiera_napoletana_5, blogs_la_pastiera_napoletana_6, blogs_la_pastiera_napoletana_7, blogs_la_pastiera_napoletana_8
+    ],
+    imgLast: [blogs_la_pastiera_napoletana_1],
     text:
       [
         [
@@ -150,8 +431,9 @@ export const blogs = [
     url: "/blogs/banana-bread",
     date: "27 Feb, 2020",
     category: "dolci",
-    img: blogs_1,
-
+    imgTop: [blogs_banana_bread_1],
+    imgR2: [blogs_banana_bread_2],
+    imgs: [blogs_banana_bread_3],
     text:
       [
         [
@@ -191,8 +473,10 @@ export const blogs = [
     url: "/blogs/panzarotti-napoletani",
     date: "27 Feb, 2020",
     category: "fritto",
-    img: blogs_1,
-
+    imgTop: [blogs_panzarotti_napoletani_1],
+    imgR2: [blogs_panzarotti_napoletani_2],
+    imgs: [blogs_panzarotti_napoletani_3],
+    imgLast: [blogs_panzarotti_napoletani_4],
     text:
       [
         [
@@ -239,8 +523,9 @@ export const blogs = [
     url: "/blogs/frittata-di-maccheroni",
     date: "27 Feb, 2020",
     category: "pasta , fritto",
-    img: blogs_1,
-
+    imgTop: [blogs_frittata_di_maccheroni_1],
+    imgR2: [blogs_frittata_di_maccheroni_2],
+    imgs: [blogs_frittata_di_maccheroni_3],
     text:
       [
         [
@@ -280,8 +565,10 @@ export const blogs = [
     url: "/blogs/tortano-napoletano",
     date: "9 April, 2020",
     category: "pizza-e-pane",
-    img: blogs_1,
-
+    imgTop: [blogs_tortano_napoletano_1],
+    imgR2: [blogs_tortano_napoletano_2, blogs_tortano_napoletano_3, blogs_tortano_napoletano_4],
+    imgs: [blogs_tortano_napoletano_5, blogs_tortano_napoletano_6, blogs_tortano_napoletano_7, blogs_tortano_napoletano_8],
+    imgLast: [blogs_tortano_napoletano_9, blogs_tortano_napoletano_10, blogs_tortano_napoletano_11],
     text:
       [
         [
@@ -313,10 +600,9 @@ export const blogs = [
     url: "/blogs/clazone-pizza-ripiena-napoletana",
     date: "5 April, 2020",
     category: "pizza-e-pane",
-    img: false,
+    imgTop: false,
     embedLink: "https://www.youtube.com/embed/FfKzZ81U6rQ",
     embedTitle: "Calzone Napoletano",
-
     text:
       [
         [
@@ -329,8 +615,9 @@ export const blogs = [
     url: "/blogs/french-baguette",
     date: "10 March, 2020",
     category: "pizza-e-pane",
-    img: blogs_1,
-
+    imgTop: [blogs_french_baguette_1],
+    imgR2: [blogs_french_baguette_2, blogs_french_baguette_3],
+    imgs: [blogs_french_baguette_4, blogs_french_baguette_5, blogs_french_baguette_6, blogs_french_baguette_7, blogs_french_baguette_8],
     text:
       [
         [
@@ -366,8 +653,11 @@ export const blogs = [
     url: "/blogs/l-arte-del-pane",
     date: "10 March, 2020",
     category: "pizza-e-pane",
-    img: blogs_1,
-
+    imgTop: [
+      blogs_l_arte_del_pane_1, blogs_l_arte_del_pane_2, blogs_l_arte_del_pane_3, blogs_l_arte_del_pane_4, blogs_l_arte_del_pane_5, blogs_l_arte_del_pane_6, blogs_l_arte_del_pane_7, blogs_l_arte_del_pane_8, blogs_l_arte_del_pane_9
+    ],
+    imgR2: [blogs_l_arte_del_pane_10,],
+    imgs: [blogs_l_arte_del_pane_11],
     text:
       [
         [
@@ -389,8 +679,12 @@ export const blogs = [
     url: "/blogs/come-fare-una-pizza-napoletana",
     date: "28 Feb, 2020",
     category: "pizza-e-pane",
-    img: blogs_1,
-
+    imgTop: [blogs_come_fare_una_pizza_napoletana_1,],
+    imgR2: [blogs_come_fare_una_pizza_napoletana_2,],
+    imgs: [blogs_come_fare_una_pizza_napoletana_3, blogs_come_fare_una_pizza_napoletana_4, blogs_come_fare_una_pizza_napoletana_5],
+    imgLast: [
+      blogs_come_fare_una_pizza_napoletana_6, blogs_come_fare_una_pizza_napoletana_7, blogs_come_fare_una_pizza_napoletana_8, blogs_come_fare_una_pizza_napoletana_9, blogs_come_fare_una_pizza_napoletana_10, blogs_come_fare_una_pizza_napoletana_11, blogs_come_fare_una_pizza_napoletana_12, blogs_come_fare_una_pizza_napoletana_13, blogs_come_fare_una_pizza_napoletana_14, blogs_come_fare_una_pizza_napoletana_15, blogs_come_fare_una_pizza_napoletana_16, blogs_come_fare_una_pizza_napoletana_17
+    ],
     text:
       [
         [
@@ -429,8 +723,9 @@ export const blogs = [
     url: "/blogs/pan-rustico-in-dutch-oven",
     date: "27 Feb, 2020",
     category: "pizza-e-pane",
-    img: blogs_1,
-
+    imgTop: [blogs_l_arte_del_pane_10],
+    imgR2: [blogs_l_arte_del_pane_1],
+    imgs: [blogs_pane_rustico_in_dutch_oven_1, blogs_pane_rustico_in_dutch_oven_2],
     text:
       [
         [
@@ -463,8 +758,9 @@ export const blogs = [
     url: "/blogs/spaghetti-alla-puttanesca",
     date: "29 Feb, 2020",
     category: "pasta , sughi",
-    img: blogs_1,
-
+    imgTop: [blogs_spaghetti_alla_puttanesca_1],
+    imgR2: [blogs_spaghetti_alla_puttanesca_2],
+    imgLast: [blogs_spaghetti_alla_puttanesca_3],
     text:
       [
         [
@@ -490,7 +786,8 @@ export const blogs = [
     url: "/blogs/pasta-e-patate-napoletana",
     date: "27 Feb, 2020",
     category: "pasta , sughi",
-    img: blogs_1,
+    imgTop: [blogs_pasta_e_patate_napoletana_1],
+    imgR2: [blogs_pasta_e_patate_napoletana_2],
     text:
       [
         [
@@ -515,7 +812,9 @@ export const blogs = [
     url: "/blogs/genovese",
     date: "27 Feb, 2020",
     category: "pasta , sughi",
-    img: blogs_1,
+    imgTop: [blogs_genovese_1],
+    imgR2: [blogs_genovese_2],
+    imgLast: [blogs_genovese_3],
     text:
       [
         [
@@ -542,7 +841,8 @@ export const blogs = [
     url: "/blogs/trenette-funghi-e-piselli",
     date: "27 Feb, 2020",
     category: "pasta , sughi",
-    img: blogs_1,
+    imgTop: [blogs_trenette_funghi_e_piselli_1],
+    imgLast: [blogs_trenette_funghi_e_piselli_2, blogs_trenette_funghi_e_piselli_3, blogs_trenette_funghi_e_piselli_4],
     text:
       [
         [
@@ -563,7 +863,10 @@ export const blogs = [
     url: "/blogs/spaghetti-pomodora-e-basilico",
     date: "27 Feb, 2020",
     category: "pasta , sughi",
-    img: blogs_1,
+    imgTop: [blogs_spaghetti_pomodoro_e_basilico_1],
+    imgR2: [blogs_spaghetti_pomodoro_e_basilico_2],
+    imgs: [blogs_spaghetti_pomodoro_e_basilico_3],
+    imgLast: [blogs_spaghetti_pomodoro_e_basilico_4],
     text:
       [
         [

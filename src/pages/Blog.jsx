@@ -1,12 +1,12 @@
+import { div } from "framer-motion/client";
 import React from "react";
 import { FaShareAlt } from "react-icons/fa";
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { author_ico, categories, recent_posts, youtube } from "../assets";
-import Menu from "../components/Menu";
 import { blogs } from "../constants";
 
-const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
+const Blog = () => {
   const { blogName } = useParams();
   const navigate = useNavigate();
 
@@ -134,9 +134,31 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
     });
   };
 
+  const renderImageGrid = (images) => {
+    if (!images || images.length === 0) return null;
+    const gridCols =
+      images.length === 2
+        ? "md:grid-cols-2"
+        : images.length >= 3
+        ? "md:grid-cols-2 lg:grid-cols-3"
+        : "grid-cols-1";
+    return (
+      <div className={`grid ${gridCols} gap-2 mb-16`}>
+        {images.map((img, idx) => (
+          <div key={idx}>
+            <img
+              src={img}
+              alt={blog.title}
+              className="object-cover w-full h-full object-center"
+            />
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="container xl relative">
         <div className="flex gap-12 pt-40 relative">
           <div className="w-full lg:w-1/4 relative">
@@ -152,9 +174,9 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
                   {blogCategories.slice(1).map((category) => (
                     <li
                       key={category}
-                      className={`px-5 py-4 bg-gray-50 hover:bg-primary-100 border-t border-primary-200 text-gray-600 hover:text-black font-elCamino text-2xl transition-all duration-200 ease-linear cursor-pointer`}
+                      className={`px-5 py-4 bg-gray-50 hover:bg-primary-100 border-t border-primary-200 text-gray-700 hover:text-black font-telegraf tracking-widest text-2xl transition-all duration-200 ease-linear cursor-pointer`}
                       onClick={() =>
-                        navigate("/blogs", {
+                        navigate("/blogs-pressreleases", {
                           state: { selectedCategory: category },
                         })
                       }
@@ -179,7 +201,7 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
                     >
                       <div className="flex items-center gap-5">
                         <img
-                          src={post.embedLink ? youtube : post.img}
+                          src={post.embedLink ? youtube : post.imgTop[0]}
                           className="w-full max-w-24 h-20 object-center object-cover"
                           alt=""
                         />
@@ -208,16 +230,9 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="w-full h-auto lg:w-3/4 relative lg:px-16">
             <div className="mb-40">
               <div
-                className={`rounded-xl overflow-hidden relative aspect-[16/8]`}
+                className={`rounded-xl overflow-hidden relative aspect-video`}
               >
-                {blog.img && (
-                  <img
-                    src={blog.img}
-                    className="object-cover object-top absolute top-0 left-0 w-full h-full"
-                    alt={blog.title}
-                  />
-                )}
-                {blog.embedLink && (
+                {blog.embedLink ? (
                   <div className="absolute w-full h-full">
                     <iframe
                       width="100%"
@@ -229,7 +244,9 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
                       allowFullScreen
                     ></iframe>
                   </div>
-                )}
+                ) : blog.imgTop && blog.imgTop.length > 0 ? (
+                  renderImageGrid(blog.imgTop)
+                ) : null}
               </div>
               <div className="pt-8">
                 <p className="flex gap-3 items-center text-gray-500 font-elCamino text-[1.4rem] font-bold">
@@ -296,51 +313,27 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
                   </div>
                 )}
                 {blog.text[1] && <div>{renderTextContent(blog.text[1])}</div>}
+                <div className="relative">
+                  {blog.imgR2 && renderImageGrid(blog.imgR2)}
+                </div>
                 {blog.text[2] && (
-                  <div className="grid grid-cols-1 gap-5">
-                    <div className="relative"></div>
+                  <div>
                     <div>{renderTextContent(blog.text[2])}</div>
                   </div>
                 )}
                 {blog.text[3] && (
-                  <div className="grid grid-cols-1 gap-5">
+                  <div>
                     <div>{renderTextContent(blog.text[3])}</div>
-                    <div className="relative"></div>
                   </div>
                 )}
-                <div className="grid"></div>
+                <div>{blog.imgs && renderImageGrid(blog.imgs)}</div>
                 {blog.text[4] && <div>{renderTextContent(blog.text[4])}</div>}
                 {blog.text[5] && (
-                  <div className="grid grid-cols-1 gap-5">
-                    <div className="relative"></div>
+                  <div>
                     <div>{renderTextContent(blog.text[5])}</div>
                   </div>
                 )}
-                <div
-                  className={`rounded-xl overflow-hidden relative aspect-[16/8]`}
-                >
-                  {blog.img && (
-                    <img
-                      src={blog.img}
-                      className="object-cover object-top absolute top-0 left-0 w-full h-full"
-                      alt={blog.title}
-                    />
-                  )}
-                  {blog.embedLink && (
-                    <div className="absolute w-full h-full">
-                      <iframe
-                        width="100%"
-                        height="100%"
-                        src={blog.embedLink}
-                        title="Calzone Napoletano"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  )}
-                </div>
+                <div>{blog.imgLast && renderImageGrid(blog.imgLast)}</div>
                 <div className="my-40 border-y border-gray-200 py-10 flex justify-between items-center">
                   <ul className="flex gap-16">
                     {[
@@ -400,7 +393,7 @@ const Blog = ({ isMenuOpen, setIsMenuOpen }) => {
                         <button
                           key={i}
                           onClick={() =>
-                            navigate("/blogs", {
+                            navigate("/blogs-pressreleases", {
                               state: {
                                 selectedCategory: toTitleCase(trimmedCat),
                               },

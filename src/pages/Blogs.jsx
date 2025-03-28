@@ -1,12 +1,10 @@
-import { text } from "framer-motion/client";
 import React, { useEffect, useRef, useState } from "react";
 import { CiShoppingTag } from "react-icons/ci";
 import { FaRedoAlt } from "react-icons/fa";
-import { GoTag } from "react-icons/go";
 import { HiOutlineCalendarDateRange } from "react-icons/hi2";
 import { Link, useLocation } from "react-router-dom";
 import { author_ico, categories, recent_posts, youtube } from "../assets";
-import Menu from "../components/Menu";
+import PressReleases from "../components/PressReleases";
 import { blogs } from "../constants";
 
 const NavBtn = ({ onClick, disabled, children }) => {
@@ -24,14 +22,18 @@ const NavBtn = ({ onClick, disabled, children }) => {
   );
 };
 
-const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
+const Blogs = () => {
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const blogsPerPage = 4;
+  const blogsPerPage = 6;
 
   useEffect(() => {
-    if (location.state && location.state.selectedCategory) {
+    const navEntries = performance.getEntriesByType("navigation");
+    const isReload = navEntries.length > 0 && navEntries[0].type === "reload";
+    if (isReload) {
+      setSelectedCategory("all");
+    } else if (location.state && location.state.selectedCategory) {
       setSelectedCategory(location.state.selectedCategory);
     }
   }, [location.state]);
@@ -91,11 +93,10 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div ref={topRef} className="container xl relative">
-        <div className="flex gap-12 pt-40 relative">
-          <div className="w-full lg:w-1/4 relative mb-[12.75rem]">
-            <div className="w-full sticky top-10">
+        <div className="flex flex-col-reverse lg:flex-row gap-12 pt-40 relative">
+          <div className="w-full lg:w-1/4 relative lg:mb-[12.75rem]">
+            <div className="w-full lg:sticky top-10">
               <div className="relative mb-8 bg-gray-50 border border-gray-200 backdrop-blur-xs rounded-lg overflow-hidden">
                 <h5 className="font-elCamino text-4xl text-black px-5 py-2 pl-2 flex items-center gap-3">
                   <span>
@@ -109,15 +110,15 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
                       key={category}
                       className={`px-5 py-3 ${
                         selectedCategory === category
-                          ? "bg-gray-200"
-                          : "bg-white hover:bg-gray-100"
+                          ? "bg-gray-700"
+                          : "bg-white hover:bg-gray-200"
                       } border-t border-gray-200 transition-all duration-200 ease-linear cursor-pointer`}
                       onClick={() => handleCategoryClick(category)}
                     >
                       <span
                         className={`${
                           selectedCategory === category
-                            ? "text-black"
+                            ? "text-white"
                             : "text-gray-900"
                         } text-2xl font-telegraf tracking-widest font-normal`}
                       >
@@ -142,7 +143,7 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
                     >
                       <div className="flex items-center gap-5">
                         <img
-                          src={post.embedLink ? youtube : post.img}
+                          src={post.embedLink ? youtube : post.imgTop[0]}
                           className="w-full max-w-24 h-20 object-center object-cover"
                           alt=""
                         />
@@ -177,7 +178,7 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
           <div
             className={`w-full h-auto lg:w-3/4 grid grid-cols-1 md:grid-cols-2 relative lg:gap-x-8`}
           >
-            {selectedCategory !== "All" && (
+            {selectedCategory !== "all" && (
               <nav className="absolute -top-14 right-0 bg-white border border-gray-300 overflow-hidden">
                 <div className="flex items-center h-12">
                   <button
@@ -199,17 +200,22 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
               </nav>
             )}
             {currentBlogs.map((blog, index) => (
-              <div className={`relative col-span-1 mb-28`} key={index}>
+              <div
+                className={`relative col-span-1 ${
+                  index === 4 || index === 5 ? "mb-14" : "mb-28"
+                }`}
+                key={index}
+              >
                 <div
-                  className={`block w-full h-auto overflow-hidden border border-transparent cursor-pointer bg-white shadow-sm hover:shadow-lg hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 ease-in-out`}
+                  className={`block w-full h-full max-h-[495px] overflow-hidden border border-transparent cursor-pointer bg-white shadow-sm hover:shadow-lg hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 ease-in-out`}
                 >
                   <Link
                     to={blog.url}
                     className={`block group overflow-hidden border-[.1rem] border-transparent transition-all duration-300 ease-[ease] relative aspect-[16/12]`}
                   >
-                    {blog.img && (
+                    {blog.imgTop && (
                       <img
-                        src={blog.img}
+                        src={blog.imgTop[0]}
                         className="transition-all group-hover:scale-105 duration-300 ease-[ease] object-cover object-center absolute top-0 left-0 w-full h-full"
                         alt={blog.title}
                       />
@@ -275,7 +281,7 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
               </div>
             ))}
             {totalPages > 1 && (
-              <nav className="mt-9 xs:mt-[66px] col-span-2">
+              <nav className="xs:mt-[66px] col-span-2">
                 <ul className="flex items-center justify-end gap-1">
                   <NavBtn
                     onClick={() => handlePageChange(currentPage - 1)}
@@ -306,6 +312,19 @@ const Blogs = ({ isMenuOpen, setIsMenuOpen }) => {
                 </ul>
               </nav>
             )}
+          </div>
+        </div>
+
+        <div className="mt-28 border border-gray-300">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-1/4">
+              <h1 className="py-10 lg:pl-5 text-black bg-gray-100 text-6xl font-resonay-base font-bold lg:border-r border-gray-300">
+                Press Releases :
+              </h1>
+            </div>
+            <div className="w-3/4 lg:px-5">
+              <PressReleases />
+            </div>
           </div>
         </div>
       </div>

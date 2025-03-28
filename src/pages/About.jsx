@@ -1,12 +1,10 @@
 import React from "react";
 import { author_2 } from "../assets";
-import Menu from "../components/Menu";
 import ContactForm from "../components/utils/ContactForm";
 
-const About = ({ isMenuOpen, setIsMenuOpen }) => {
+const About = () => {
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="container xl">
         <div className="flex flex-row-reverse gap-40 items-center mb-40 pt-40">
           <div className="w-1/2">

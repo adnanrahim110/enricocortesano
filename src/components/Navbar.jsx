@@ -33,7 +33,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       } z-[1010]`}
     >
       <div className="container xl h-16">
-        <div className="relative self-start w-[calc(1.4/8_*_100%)]">
+        <div className="relative self-start w-3/8 lg:w-[calc(1.4/8_*_100%)]">
           <Link to={"/"}>
             <img
               src={logo}
@@ -43,7 +43,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           </Link>
         </div>
         <div
-          className={`flex ${
+          className={`hidden lg:flex ${
             isHoverinMenu
               ? "w-[calc(3.9/8_*_100%)]"
               : isMenuOpen
@@ -72,9 +72,13 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           </button>
         </div>
         <div
-          className={`flex ${
-            isHoverinMenu ? "mr-6" : isMenuOpen ? "mr-4" : "mr-0"
-          } w-[calc(1.4/8_*_100%)] justify-end transition-all duration-150 ease-linear`}
+          className={`lg:flex ${
+            isHoverinMenu
+              ? "mr-6"
+              : isMenuOpen
+              ? "lg:mr-4 w-sm max-lg:absolute max-lg:right-8 max-lg:top-32"
+              : "mr-0 hidden"
+          } lg:w-[calc(1.4/8_*_100%)] justify-end transition-all duration-150 ease-linear`}
         >
           <div
             className={`grid grid-cols-4 gap-0 w-full text-right ${
@@ -118,7 +122,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               isMenuOpen
                 ? "bg-primary shadow-[0_0_5px_3px_rgba(0,0,0,0.3)] hover:scale-110"
                 : isScrolled
-                ? "fixed right-12 bg-primary-100 border-primary-300 z-[1010]"
+                ? "fixed right-8 lg:right-12 bg-primary-100 border-primary-300 z-[1010]"
                 : (location.pathname === "/"
                     ? "bg-primary-100/50 border-primary-200"
                     : "bg-primary-50 border-primary-200/50") + " relative"

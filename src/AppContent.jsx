@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { texture1 } from "./assets";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu";
 import Navbar from "./components/Navbar";
 import Loader from "./components/utils/Loader";
 import OpenAtTop from "./components/utils/OpenAtTop";
@@ -16,6 +17,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import PizzaCalculator from "./pages/PizzaCalculator";
+import Riflessioni from "./pages/Riflessioni";
 import Videos from "./pages/Videos";
 
 const AppContent = () => {
@@ -62,6 +64,7 @@ const AppContent = () => {
       {loading && <Loader />}
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <ScrollToTop />
+      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="relative">
         {location.pathname === "/blogs" && (
           <img
@@ -71,72 +74,17 @@ const AppContent = () => {
           />
         )}
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Home isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <About isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/book"
-            element={
-              <Book isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/blogs"
-            element={
-              <Blogs isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/blogs/:blogName"
-            element={
-              <Blog isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/videos"
-            element={
-              <Videos isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/categories"
-            element={
-              <Categories
-                isMenuOpen={isMenuOpen}
-                setIsMenuOpen={setIsMenuOpen}
-              />
-            }
-          />
-          <Route
-            path="/pizza-calcolatore"
-            element={
-              <PizzaCalculator
-                isMenuOpen={isMenuOpen}
-                setIsMenuOpen={setIsMenuOpen}
-              />
-            }
-          />
-          <Route
-            path="/:category"
-            element={
-              <Category isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <Contact isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            }
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/blogs-pressreleases" element={<Blogs />} />
+          <Route path="/blogs/:blogName" element={<Blog />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/pizza-calcolatore" element={<PizzaCalculator />} />
+          <Route path="/:categoryId" element={<Category />} />
+          <Route path="/riflessioni" element={<Riflessioni />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

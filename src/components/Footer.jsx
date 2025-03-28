@@ -26,8 +26,8 @@ const Footer = () => {
     <footer>
       <Promo />
       <div className="container xl">
-        <div className="border-y border-primary-400 mb-2 flex bg-primary-50">
-          <div className="flex flex-col w-[33.33%] border-l border-primary-400 pt-12">
+        <div className="border-y border-primary-400 mb-2 flex flex-col lg:flex-row bg-primary-50">
+          <div className="flex flex-col w-full lg:w-[33.33%] border-x lg:border-r-0 lg:border-l border-primary-400 pt-12">
             <img
               src={logo}
               className="self-start h-40 mb-5 object-contain"
@@ -54,7 +54,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col w-[33.33%] px-8 border-x border-b border-primary-400">
+          <div className="flex flex-col w-full lg:w-[33.33%] px-8 border-x border-b border-primary-400">
             <div className="max-h-[400px] overflow-hidden -mx-8">
               <div className="overflow-x-hidden overflow-y-auto h-full sb_xs">
                 <script
@@ -68,11 +68,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[33.33%] px-8 border-r border-primary-400 pt-12">
+          <div className="flex flex-col w-full lg:w-[33.33%] px-8 border-x lg:border-l-0 lg:border-r border-primary-400 pt-12">
             <strong className="mb-7 block font-medium">
               Stay in the loop!
             </strong>
-            <p className="font-telegraf max-w-2/3 text-2xl text-primary-500 opacity-70">
+            <p className="font-telegraf max-w-2/3 text-2xl text-primary-500 opacity-70 mb-12 lg:mb-0">
               Don’t miss out on the latest updates—follow me on social media and
               be part of the journey! Let’s stay connected!
             </p>

@@ -56,7 +56,7 @@ const Hamburger = ({ isMenuOpen }) => {
 
   return (
     <button className="flex items-center relative ml-[80px] text-black cursor-pointer">
-      <span className="relative h-[26px] text-inherit *:z-[3] *:h-[26px] *:absolute *:top-0 *:right-0 *:whitespace-nowrap *:font-medium">
+      <span className="relative h-[26px] text-inherit *:leading-tight *:z-[3] *:h-[26px] *:absolute *:top-0 *:right-0 *:whitespace-nowrap *:font-medium">
         <AnimatePresence exitBeforeEnter>
           {!isMenuOpen ? (
             <AnimatedText

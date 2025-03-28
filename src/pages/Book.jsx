@@ -1,11 +1,9 @@
 import { book } from "../assets";
-import Menu from "../components/Menu";
 import ContactForm from "../components/utils/ContactForm";
 
-const Book = ({ isMenuOpen, setIsMenuOpen }) => {
+const Book = () => {
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="container lg">
         <div className="flex justify-between items-center pt-40 pb-20">
           <div className="w-4/12">

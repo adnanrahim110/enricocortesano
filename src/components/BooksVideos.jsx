@@ -21,7 +21,7 @@ const BooksVideos = () => {
 
   return (
     <div className="container xl">
-      <div className="grid grid-cols-12 aspect-[5/1] gap-5 mb-20 mt-16">
+      <div className="grid grid-cols-12 aspect-video lg:aspect-[5/1] gap-5 mb-10 lg:mb-20 mt-16">
         <div className="relative col-span-12 w-full h-full row-span-1 rounded-2xl">
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -31,6 +31,11 @@ const BooksVideos = () => {
             loop
             slidesPerView={3}
             spaceBetween={20}
+            breakpoints={{
+              0: { slidesPerView: 1, spaceBetween: 10, speed: 1500 },
+              786: { slidesPerView: 2, spaceBetween: 20, speed: 2500 },
+              1024: { slidesPerView: 3 },
+            }}
             className="h-full w-full rounded-2xl"
           >
             {[
@@ -57,7 +62,7 @@ const BooksVideos = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div>
+          <div className="hidden md:block">
             <SwiperBtn
               direction={"prev"}
               onClick={() => swiperRef.current.slidePrev()}
@@ -81,7 +86,7 @@ const BooksVideos = () => {
           </div>
         </div>
       </div>
-      <div className="border-[1rem] border-primary-200 rounded-4xl overflow-hidden relative aspect-[16/7] mb-48">
+      <div className="border-[1rem] border-primary-200 rounded-4xl overflow-hidden relative aspect-video lg:aspect-[16/7] mb-48">
         <video
           ref={videoRef}
           src={videos_bookdesc}
@@ -91,7 +96,7 @@ const BooksVideos = () => {
           autoPlay
           playsInline
         ></video>
-        <div className="absolute top-0 left-0 right-0 bottom-0 z-[2] bg-radial from-black/10 via-black/50 to-black flex items-start justify-end p-8 flex-col gap-2">
+        <div className="absolute top-0 left-0 right-0 bottom-0 z-[2] bg-radial from-black/10 via-black/50 to-black flex items-end lg:items-start justify-start lg:justify-end p-4 lg:p-8 flex-row lg:flex-col gap-2">
           {[
             {
               img: amz1,
@@ -105,19 +110,19 @@ const BooksVideos = () => {
             <Link key={item.url} to={item.url} target="_blank">
               <img
                 src={item.img}
-                className="w-80 transition-all duration-200 transform will-change-transform scale-90 hover:scale-95 ease-in grayscale-100 hover:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.3))_grayscale(0%)]"
+                className="w-40 lg:w-80 transition-all duration-200 transform will-change-transform scale-90 hover:scale-95 ease-in grayscale-100 hover:[filter:drop-shadow(0_0_5px_rgba(255,255,255,0.3))_grayscale(0%)]"
                 alt=""
               />
             </Link>
           ))}
           <button
-            className="absolute top-8 right-8 bg-white/5 border border-white/10 backdrop-blur-xs rounded-xl p-3 transition-all duration-200 ease-in"
+            className="absolute top-8 right-8 bg-white/5 border border-white/10 backdrop-blur-xs rounded-xl p-2 lg:p-3 transition-all duration-200 ease-in"
             onClick={handleAudio}
           >
             {isMuted ? (
-              <MdOutlineMusicOff className="text-5xl transform transition-all duration-200 ease-in-out hover:scale-110" />
+              <MdOutlineMusicOff className="text-4xl lg:text-5xl transform transition-all duration-200 ease-in-out hover:scale-110" />
             ) : (
-              <MdOutlineMusicNote className="text-5xl transform transition-all duration-200 ease-in-out hover:scale-110" />
+              <MdOutlineMusicNote className="text-4xl lg:text-5xl transform transition-all duration-200 ease-in-out hover:scale-110" />
             )}
           </button>
         </div>

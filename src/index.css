@@ -53,6 +53,12 @@
     line-height: normal;
   }
 
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  }
+
   button {
     color: inherit;
     background: 0 0;
@@ -180,7 +186,7 @@
 
 @layer utilities {
   .container {
-    @apply mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] xl:max-w-6xl py-0 px-12 w-full
+    @apply mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[992px] xl:max-w-6xl py-0 px-5 lg:px-12 w-full
   }
 
   .container:not([class*='mx-']):not([class*='my-']) {

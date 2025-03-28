@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { mi1, mi2, mi3, texture1 } from "../assets";
-import FadeInView from "./utils/FadeInView";
 
 const MenuItems = () => {
   return (
@@ -11,8 +10,8 @@ const MenuItems = () => {
         className="w-full h-full top-[50%] right-0 absolute z-[0] -translate-y-[50%] rotate-180 mix-blend-multiply opacity-10"
         alt=""
       />
-      <div className="text-center py-40">
-        <ul className="flex gap-20 justify-center mt-32 mb-8">
+      <div className="text-center py-20 lg:py-40">
+        <ul className="flex flex-col lg:flex-row gap-36 lg:gap-20 items-center justify-center mt-20 lg:mt-32 mb-0 lg:mb-8">
           {[
             {
               title: "Neapolitan Panzarotti",
@@ -30,7 +29,7 @@ const MenuItems = () => {
           ].map((item, i) => (
             <li
               key={i}
-              className="relative aspect-[10/14] rounded-2xl w-[27%] mb-4 transform not-[:nth-child(2)]:translate-y-8 first:-rotate-[5deg] last:rotate-[5deg]"
+              className="relative z-[2] aspect-[10/14] rounded-2xl w-[calc(100%_-_1.25rem)] lg:w-[27%] mb-4 transform lg:not-[:nth-child(2)]:translate-y-8 lg:first:-rotate-[5deg] lg:last:rotate-[5deg]"
             >
               <Link to={item.url} className="group">
                 <div className="absolute w-[90%] h-80 border-[3px] border-primary-500 z-[2] -top-20 left-[50%] -translate-x-[50%] group-hover:top-0 group-hover:w-full group-hover:h-full transition-all duration-150 ease-linear">

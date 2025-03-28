@@ -6,13 +6,13 @@ const Promo = () => {
   return (
     <div>
       <div className="container xl relative my-16">
-        <div className="bg-primary-100 h-[40rem] w-full relative flex overflow-hidden">
-          <div className="w-[55%] p-12">
-            <span className="text-[1.6rem] text-primary-400 font-telegraf font-bold relative flex items-center">
+        <div className="bg-primary-100 lg:h-[40rem] w-full relative flex flex-col lg:flex-row overflow-hidden">
+          <div className="w-full lg:w-[55%] p-12">
+            <span className="text-3xl lg:text-[1.6rem] text-primary-400 font-telegraf font-bold relative flex items-center">
               <img src={footer_eye} className="h-8 mr-4 hue-rotate-30" alt="" />
               Pizza Calculator
             </span>
-            <h3 className="mt-8 mb-10 font-delaGothic font-medium text-[24px] leading-snug text-primary-500">
+            <h3 className="mt-8 mb-10 font-delaGothic font-medium text-[18px] lg:text-[24px] leading-snug text-primary-500">
               A hidden dish cherished by those who appreciate the magic of a
               perfect crust. A place where cheese melts into creamy perfection,
               sauce reflects the legacy of tradition, and every bite is a
@@ -20,7 +20,7 @@ const Promo = () => {
             </h3>
             <Button children={"Calculate Pizza"} href={"/pizza-calcolatore"} />
           </div>
-          <div className="h-full w-[35%] ml-auto mr-40 relative max-2lg:mr-12">
+          <div className="hidden md:block h-full w-full lg:w-[35%] ml-auto mr-40 relative max-2lg:mr-12">
             <img
               src={cal}
               className="absolute bottom-0 transform right-0 w-[60%] translate-y-12 rotate-[5deg]"

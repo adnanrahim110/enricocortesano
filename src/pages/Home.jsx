@@ -14,7 +14,6 @@ import {
 } from "../assets";
 import BigTextBlock from "../components/BigTextBlock";
 import BooksVideos from "../components/BooksVideos";
-import Menu from "../components/Menu";
 import MenuItems from "../components/MenuItems";
 import Newsletter from "../components/Newsletter";
 import PageSLider from "../components/PageSLider";
@@ -32,31 +31,30 @@ const pagesliderImgs = [
   },
 ];
 
-const Home = ({ isMenuOpen, setIsMenuOpen }) => {
+const Home = () => {
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <div className="h-[calc(-66px_+_100dvh)] max-h-[60rem] flex items-center relative bg-primary-50">
+      <div className="pt-36 lg:pt-0 h-[calc(-66px_+_100dvh)] lg:max-h-[60rem] flex items-center relative bg-primary-50">
         <img
           src={eye_bg}
           className="absolute z-[0] top-[50%] left-0 -translate-y-[50%] h-full align-middle opacity-5"
           alt=""
         />
-        <div className="container xl relative h-full z-[1] flex lg:flex-row-reverse justify-between items-center">
-          <div className="w-[50%] pr-12 font-telegraf font-bold">
-            <h1 className="font-delaGothic text-[4.2rem] leading-snug mb-8 text-black">
+        <div className="container xl relative h-full z-[1] flex flex-col lg:flex-row-reverse justify-between items-center">
+          <div className="w-full lg:w-1/2 mb-20 lg:mb-0 lg:pr-12 font-telegraf font-bold text-center lg:text-left">
+            <h1 className="font-delaGothic text-5xl lg:text-[4.2rem] leading-snug mb-8 text-black">
               <AnimatedText
                 text={"Step into a Culinary Journey Like No Other"}
               />
             </h1>
             <AnimatedText
               as="h3"
-              className="font-delaGothic text-4xl leading-snug mb-14"
+              className="font-delaGothic text-4xl lg:text-4xl leading-snug mb-14"
               text={
                 "Discover the rich flavors and traditions of Italian cuisine through the eyes of Enrico."
               }
             />
-            <p className="text-gray-500 text-3xl">
+            <p className="text-gray-500 text-2xl lg:text-3xl">
               <AnimatedText
                 text={
                   "I believe cooking is more than just a skill—it’s an art that blends love, tradition, and creativity. Using fresh, local ingredients and honoring time-honored techniques while welcoming innovation and personal touches brings dishes to life. Food is more than nourishment; it’s a bridge that connects people, fosters togetherness, and creates lasting memories around the table."
@@ -65,7 +63,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
               />
             </p>
           </div>
-          <div className="w-1/2 h-full min-h-[360px] -ml-12 relative">
+          <div className="w-[calc(100%_+_25px)] -mx-5 lg:w-1/2 h-full min-h-[360px] lg:-ml-12 relative">
             <Swiper
               modules={[Autoplay, EffectFade]}
               loop

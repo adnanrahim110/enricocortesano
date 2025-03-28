@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import Menu from "../components/Menu";
 
-const Videos = ({ isMenuOpen, setIsMenuOpen }) => {
+const Videos = () => {
   useEffect(() => {
     const hideLinks = () => {
       document
@@ -20,7 +19,6 @@ const Videos = ({ isMenuOpen, setIsMenuOpen }) => {
   }, []);
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="container xl">
         <script
           src="https://static.elfsight.com/platform/platform.js"

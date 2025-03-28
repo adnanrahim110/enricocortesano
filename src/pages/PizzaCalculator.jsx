@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 import { calculator, calculatorBg, flour, salt, water, yeast } from "../assets";
-import Menu from "../components/Menu";
 import Button from "../components/utils/Button";
 import FadeInView from "../components/utils/FadeInView";
 
@@ -21,7 +20,7 @@ const defaultValues = {
 
 const convertToDryYeast = (freshYeast) => (freshYeast / 3.29).toFixed(2);
 
-const PizzaCalculator = ({ isMenuOpen, setIsMenuOpen }) => {
+const PizzaCalculator = () => {
   const [calForm, setCalForm] = useState({
     pizzaType: "Napoletana",
     noOfPizza: 1,
@@ -101,7 +100,6 @@ const PizzaCalculator = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <>
-      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="pt-40 mb-32 text-center">
         <h1 className="text-8xl leading-28 font-delaGothic text-primary-500 mb-8">
           Pizza Calculator
