@@ -22,13 +22,13 @@ const Promo = () => {
           </div>
           <div className="hidden md:block h-full w-full lg:w-[35%] ml-auto mr-40 relative max-2lg:mr-12">
             <img
-              src={cal}
-              className="absolute bottom-0 transform right-0 w-[60%] translate-y-12 rotate-[5deg]"
+              src={cal2}
+              className="absolute bottom-0 transform right-0 w-[60%] translate-y-0 rotate-[5deg]"
               alt=""
             />
             <img
-              src={cal2}
-              className="absolute bottom-0 transform left-0 w-[60%] translate-y-24 -rotate-[3deg]"
+              src={cal}
+              className="absolute bottom-0 transform left-0 w-[60%] translate-y-10 -rotate-[3deg]"
               alt=""
             />
           </div>
