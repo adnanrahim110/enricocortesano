@@ -1,5 +1,6 @@
 export { default as amz } from './images/amz.png';
 export { default as amz1 } from './images/amz1.png';
+export { default as audio_1 } from './images/audio/1.wav';
 export { default as audio } from './images/audio.webp';
 export { default as author_1 } from './images/author/1.avif';
 export { default as author_2 } from './images/author/2.avif';

@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BsFillTriangleFill } from "react-icons/bs";
+import { FaPause } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { audio, logo } from "../assets";
+import { audio, audio_1, logo } from "../assets";
 import { socials } from "../constants";
 import Hamburger from "./utils/Hamburger";
 
@@ -9,6 +10,10 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHoverinMenu, setIsHoverinMenu] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+
+  // Create an audio instance only once
+  const audioRef = useRef(new Audio(audio_1));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +27,27 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleAudioEnd = () => {
+      setIsAudioPlaying(false);
+    };
+    const currentAudio = audioRef.current;
+    currentAudio.addEventListener("ended", handleAudioEnd);
+    return () => {
+      currentAudio.removeEventListener("ended", handleAudioEnd);
+    };
+  }, []);
+
+  const toggleAudio = () => {
+    if (!isAudioPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    setIsAudioPlaying((prev) => !prev);
+  };
 
   return (
     <header
@@ -52,11 +78,20 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           } justify-end transition-all duration-150 ease-linear`}
         >
           <button
+            onClick={toggleAudio}
             className={`btn_submit rounded-none w-[24.75rem] ${
               location.pathname === "/"
                 ? "bg-primary-200/50"
                 : "bg-primary-100/70"
-            } p-[10px_40px_10px_50px] m-0 relative overflow-hidden font-reklame tracking-wider before:absolute before:content-['Play_Audio'] before:content-center before:font-elCamino before:text-3xl before:text-center before:pl-11 before:text-white before:w-full before:h-full before:bg-primary before:top-0 before:left-0 before:-translate-x-full hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-linear group`}
+            } p-[10px_40px_10px_50px] m-0 relative overflow-hidden font-reklame tracking-wider before:absolute ${
+              isAudioPlaying
+                ? "before:content-['Stop_Audio']"
+                : "before:content-['Play_Audio']"
+            } before:content-center before:font-elCamino before:text-3xl before:text-center before:pl-11 before:text-white before:w-full before:h-full before:bg-primary before:top-0 before:left-0 ${
+              isAudioPlaying
+                ? "before:translate-x-0"
+                : "before:-translate-x-full hover:before:translate-x-0"
+            } before:transition-transform before:duration-300 before:ease-linear group`}
           >
             <span>
               <img
@@ -66,9 +101,22 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               />
             </span>
             BTeP introduction
-            <BsFillTriangleFill
-              className={`w-[10px] right-[15px] group-hover:text-primary-50 group-hover:scale-120 group-hover:mt-0.5`}
-            />
+            {isAudioPlaying ? (
+              <FaPause
+                className={`w-[10px] right-[15px] ${
+                  isAudioPlaying &&
+                  "text-primary-50 scale-125 mt-0 transform -translate-y-1/2 rotate-0"
+                }`}
+              />
+            ) : (
+              <BsFillTriangleFill
+                className={`w-[10px] right-[15px] ${
+                  isAudioPlaying
+                    ? "text-primary-50 scale-125 mt-0.5"
+                    : "group-hover:text-primary-50 group-hover:scale-125 group-hover:mt-0.5"
+                }`}
+              />
+            )}
           </button>
         </div>
         <div

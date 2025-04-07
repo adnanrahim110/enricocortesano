@@ -8,7 +8,7 @@ const imagesDir = path.join(assetsDir, 'images');
 const outputFile = path.join(assetsDir, 'index.js');
 
 // Define allowed image extensions
-const validExtensions = ['.png', '.jpg', '.jpeg', '.svg', '.gif', '.webp', '.avif', '.mp4'];
+const validExtensions = ['.png', '.jpg', '.jpeg', '.svg', '.gif', '.webp', '.avif', '.mp4', '.wav', '.mp3'];
 
 // Array to hold each export line
 const exportLines = [];
