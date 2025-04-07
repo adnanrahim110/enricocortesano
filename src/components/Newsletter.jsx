@@ -56,7 +56,7 @@ const Newsletter = () => {
                     <p>
                       I accept the{" "}
                       <Link
-                        to={"/privacy-conditions"}
+                        to={"/"}
                         className="underline hover:text-primary-100 hover:no-underline"
                       >
                         privacy conditions
