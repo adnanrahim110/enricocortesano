@@ -14,6 +14,12 @@ const PressReleases = () => {
         speed={5000}
         slidesPerView={5}
         spaceBetween={30}
+        breakpoints={{
+          0: { slidesPerView: 2, spaceBetween: 15 },
+          576: { slidesPerView: 3, spaceBetween: 20 },
+          768: { slidesPerView: 4, spaceBetween: 30 },
+          1024: { slidesPerView: 5, spaceBetween: 30 },
+        }}
         className="h-full"
       >
         {pressreleases.map((release, index) => (

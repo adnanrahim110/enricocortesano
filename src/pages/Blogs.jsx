@@ -317,12 +317,12 @@ const Blogs = () => {
 
         <div className="mt-28 border border-gray-300">
           <div className="flex flex-col lg:flex-row">
-            <div className="w-1/4">
+            <div className="w-full lg:w-1/4">
               <h1 className="py-10 lg:pl-5 text-black bg-gray-100 text-6xl font-resonay-base font-bold lg:border-r border-gray-300">
                 Press Releases :
               </h1>
             </div>
-            <div className="w-3/4 lg:px-5">
+            <div className="w-full lg:w-3/4 lg:px-5">
               <PressReleases />
             </div>
           </div>

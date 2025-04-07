@@ -14,8 +14,11 @@ const Category = () => {
   const renderGrid = (row, oneImgIndex) => {
     if (row.imgs && row.imgs.length > 1) {
       return (
-        <div className="grid grid-cols-7 my-8" key={row.url}>
-          <div className="flex items-center col-span-2 justify-center">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-7 mb-40 lg:my-8"
+          key={row.url}
+        >
+          <div className="order-2 lg:order-1 flex items-center col-span-2 justify-center">
             <img
               src={row.imgs[0]}
               alt={row.title}
@@ -23,11 +26,11 @@ const Category = () => {
             />
           </div>
           <div
-            className="col-span-3 flex flex-col items-center p-36 justify-center text-center"
+            className="order-1 lg:order-2 col-span-3 flex flex-col items-center p-20 lg:p-36 justify-center text-center"
             style={{ backgroundColor: row.bgColor }}
           >
             <h2
-              className="text-7xl tracking-[1rem] leading-24 font-bold font-sans uppercase mb-5"
+              className="text-4xl lg:text-7xl tracking-[1rem] leading-12 lg:leading-24 font-bold font-sans uppercase mb-5"
               style={{ color: row.titleColor }}
             >
               {row.title}
@@ -43,12 +46,12 @@ const Category = () => {
             </p>
             <Link
               to={row.url}
-              className="mt-4 inline-block bg-black border-2 border-black text-white px-8 tracking-widest text-xl uppercase leading-none py-6 rounded hover:text-black hover:bg-transparent transition-all duration-200 ease-in-out"
+              className="mt-4 inline-block bg-black border-2 border-black text-white px-8 tracking-widest text-base lg:text-xl uppercase leading-none py-6 rounded hover:text-black hover:bg-transparent transition-all duration-200 ease-in-out"
             >
               Guarda la ricetta
             </Link>
           </div>
-          <div className="flex items-center justify-center col-span-2">
+          <div className="order-3 items-center justify-center col-span-2 hidden lg:flex">
             <img
               src={row.imgs[1]}
               alt={row.title}
@@ -60,8 +63,11 @@ const Category = () => {
     } else {
       if (oneImgIndex % 2 === 0) {
         return (
-          <div className="grid grid-cols-2 my-8" key={row.url}>
-            <div className="flex items-center justify-center aspect-square">
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 mb-40 lg:my-8"
+            key={row.url}
+          >
+            <div className="order-2 lg:order-1 flex items-center justify-center aspect-square">
               <img
                 src={row.imgs[0]}
                 alt={row.title}
@@ -69,11 +75,11 @@ const Category = () => {
               />
             </div>
             <div
-              className="flex flex-col items-center px-44 py-28 justify-center text-center"
+              className="order-1 lg:order-2 flex flex-col items-center p-20 lg:px-44 lg:py-28 justify-center text-center"
               style={{ backgroundColor: row.bgColor }}
             >
               <h2
-                className="text-7xl tracking-[1rem] leading-24 font-bold font-sans uppercase mb-10"
+                className="text-4xl lg:text-7xl tracking-[1rem] leading-12 lg:leading-24 font-bold font-sans uppercase mb-10"
                 style={{ color: row.titleColor }}
               >
                 {row.title}
@@ -89,7 +95,7 @@ const Category = () => {
               </p>
               <Link
                 to={row.url}
-                className="mt-4 inline-block bg-black border-2 border-black text-white px-8 tracking-widest text-xl uppercase leading-none py-6 rounded hover:text-black hover:bg-transparent transition-all duration-200 ease-in-out"
+                className="mt-4 inline-block bg-black border-2 border-black text-white px-8 tracking-widest text-base lg:text-xl uppercase leading-none py-6 rounded hover:text-black hover:bg-transparent transition-all duration-200 ease-in-out"
               >
                 Guarda la ricetta
               </Link>
@@ -98,13 +104,16 @@ const Category = () => {
         );
       } else {
         return (
-          <div className="grid grid-cols-2 my-8" key={row.url}>
+          <div
+            className="grid grid-cols-1 lg:grid-cols-2 mb-40 lg:my-8"
+            key={row.url}
+          >
             <div
-              className="flex flex-col items-center px-44 py-28 justify-center text-center"
+              className="flex flex-col items-center p-20 lg:px-44 lg:py-28 justify-center text-center"
               style={{ backgroundColor: row.bgColor }}
             >
               <h2
-                className="text-7xl tracking-[1rem] leading-24 font-bold font-sans uppercase mb-10"
+                className="text-4xl lg:text-7xl tracking-[1rem] leading-12 lg:leading-24 font-bold font-sans uppercase mb-10"
                 style={{ color: row.titleColor }}
               >
                 {row.title}
@@ -120,7 +129,7 @@ const Category = () => {
               </p>
               <Link
                 to={row.url}
-                className="mt-4 inline-block bg-black border-2 border-black text-white px-8 tracking-widest text-xl uppercase leading-none py-6 rounded hover:text-black hover:bg-transparent transition-all duration-200 ease-in-out"
+                className="mt-4 inline-block bg-black border-2 border-black text-white px-8 tracking-widest text-base lg:text-xl uppercase leading-none py-6 rounded hover:text-black hover:bg-transparent transition-all duration-200 ease-in-out"
               >
                 Guarda la ricetta
               </Link>

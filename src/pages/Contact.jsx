@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <section className="pt-40">
         <div className="container xl">
-          <ContactForm flexDir={"flex-row"} />
+          <ContactForm flexDir={"lg:flex-row"} />
         </div>
       </section>
     </>

@@ -6,8 +6,8 @@ const About = () => {
   return (
     <>
       <div className="container xl">
-        <div className="flex flex-row-reverse gap-40 items-center mb-40 pt-40">
-          <div className="w-1/2">
+        <div className="flex flex-col-reverse lg:flex-row-reverse gap-40 items-center mb-40 pt-40">
+          <div className="w-full lg:w-1/2">
             <h2 className="text-7xl font-delaGothic mb-12">
               How I developed a passion for cooking
             </h2>
@@ -35,7 +35,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="w-1/2 relative aspect-square">
+          <div className="w-full lg:w-1/2 relative aspect-square">
             <img
               src={author_2}
               className="object-cover object-center absolute top-0 left-0 h-full w-full rounded-2xl"

@@ -160,7 +160,7 @@ const Blog = () => {
   return (
     <>
       <div className="container xl relative">
-        <div className="flex gap-12 pt-40 relative">
+        <div className="flex flex-col-reverse lg:flex-row gap-12 pt-40 relative">
           <div className="w-full lg:w-1/4 relative">
             <div className="w-full sticky top-10 mb-40">
               <div className="relative mb-8 bg-primary-50/50 border border-primary-200 backdrop-blur-xs rounded-lg overflow-hidden">
@@ -228,9 +228,9 @@ const Blog = () => {
             </div>
           </div>
           <div className="w-full h-auto lg:w-3/4 relative lg:px-16">
-            <div className="mb-40">
+            <div className="lg:mb-40">
               <div
-                className={`rounded-xl overflow-hidden relative aspect-video`}
+                className={`rounded-xl overflow-hidden relative aspect-square lg:aspect-video`}
               >
                 {blog.embedLink ? (
                   <div className="absolute w-full h-full">
@@ -249,7 +249,7 @@ const Blog = () => {
                 ) : null}
               </div>
               <div className="pt-8">
-                <p className="flex gap-3 items-center text-gray-500 font-elCamino text-[1.4rem] font-bold">
+                <p className="flex gap-3 items-center text-gray-500 font-elCamino text-base lg:text-[1.4rem] font-bold">
                   <img
                     src={author_ico}
                     alt="Enrico"
@@ -267,7 +267,7 @@ const Blog = () => {
                   </span>
                 </p>
                 <h1
-                  className={`text-black text-7xl leading-tight mt-20 mb-16 font-reklame font-semibold`}
+                  className={`text-black text-8xl lg:text-7xl leading-tight my-10 lg:mt-20 lg:mb-16 font-reklame font-semibold`}
                 >
                   {blog.title}
                 </h1>
@@ -334,7 +334,7 @@ const Blog = () => {
                   </div>
                 )}
                 <div>{blog.imgLast && renderImageGrid(blog.imgLast)}</div>
-                <div className="my-40 border-y border-gray-200 py-10 flex justify-between items-center">
+                <div className="my-20 lg:my-40 border-y border-gray-200 py-10 flex justify-between items-center">
                   <ul className="flex gap-16">
                     {[
                       {

@@ -27,7 +27,7 @@ const Riflessioni = () => {
             className="absolute w-full h-full object-cover object-center z-0"
             alt=""
           />
-          <h1 className="relative z-[1] max-w-[300px] md:max-w-[400px] text-white [text-shadow:0_4px_5px_rgba(0,0,0,0.5)] text-7xl font-serif italic leading-32">
+          <h1 className="relative z-[1] max-w-[300px] md:max-w-[400px] text-white [text-shadow:0_4px_5px_rgba(0,0,0,0.5)] text-4xl leading-12 lg:text-7xl font-serif italic lg:leading-32">
             Riflessioni di un Italiano negli Stati Uniti
           </h1>
         </div>
@@ -39,8 +39,8 @@ const Riflessioni = () => {
               alt=""
             />
           </div>
-          <div className="flex flex-col items-start p-16 justify-center bg-[#DEB940]">
-            <h2 className="text-9xl text-white tracking-[.5rem] leading-24 font-black font-sans uppercase mb-10">
+          <div className="flex flex-col items-start p-8 lg:p-16 justify-center bg-[#DEB940]">
+            <h2 className="text-7xl lg:text-9xl text-white tracking-[.5rem] leading-16 lg:leading-24 font-black font-sans uppercase mb-7 lg:mb-10">
               PREMESSA
             </h2>
             <p className="mt-2 font-light tracking-wide font-sans mb-5 text-black text-2xl">
@@ -74,7 +74,7 @@ const Riflessioni = () => {
             </Link>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-5">
           {riflessioniContent.map((item, idx) => (
             <div className="w-full h-full" key={idx} ref={topRef}>
               <div
@@ -91,12 +91,15 @@ const Riflessioni = () => {
                   <h3 className="text-4xl mb-5 px-5">{item.title}</h3>
                   {expandedItems[idx] ? (
                     item.text.map((paragraph, i) => (
-                      <p key={i} className="font-serif text-black mb-5 px-5">
+                      <p
+                        key={i}
+                        className="font-serif text-black mb-5 px-5 leading-normal"
+                      >
                         {paragraph}
                       </p>
                     ))
                   ) : (
-                    <p className="font-serif text-black not-last:mb-10 line-clamp-6 px-5">
+                    <p className="font-serif leading-normal text-black not-last:mb-10 line-clamp-6 px-5">
                       {Array.isArray(item.text)
                         ? item.text.join(" ")
                         : item.text}

@@ -105,14 +105,14 @@ const PizzaCalculator = () => {
           Pizza Calculator
         </h1>
         <p className="mx-auto max-w-[65rem]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nam.
-          Culpa ab sunt dolore magnam repudiandae, provident corrupti debitis!
-          A!
+          Pizza Maestro - “Where every slice is a masterpiece, perfected with
+          passion, tradition, and the ideal balance of cheese, sauce, and
+          crust.”
         </p>
       </div>
       <div className="container xl">
-        <div className="flex gap-16">
-          <div className="w-[50%] rounded-2xl bg-primary px-8 py-6">
+        <div className="flex flex-col lg:flex-row gap-16">
+          <div className="w-full lg:w-1/2 rounded-2xl bg-primary px-8 py-6">
             <form onSubmit={handleSubmit} noValidate>
               <div className="grid gap-x-[2%] gap-y-[10px] grid-cols-12 w-full">
                 <div className="col-start-1 -col-end-1 min-w-0">
@@ -168,13 +168,13 @@ const PizzaCalculator = () => {
               </div>
             </form>
           </div>
-          <div className="w-[50%] rounded-2xl bg-primary relative p-8 overflow-hidden">
+          <div className="w-full lg:w-1/2 rounded-2xl bg-primary relative p-8 overflow-hidden min-h-[424px]">
             <img
               src={calculatorBg}
               className="absolute w-full h-full object-cover top-0 left-0 opacity-10 mix-blend-multiply"
               alt=""
             />
-            <div className="w-full h-full flex items-center justify-center relative z-[2]">
+            <div className="w-full h-full flex items-center justify-center relative z-[2] min-h-[424px]">
               {isCalculated ? (
                 <FadeInView className="grid gap-x-[2%] grid-rows-4 gap-y-[10px] grid-cols-12 w-full h-full font-delaGothic">
                   {[
@@ -221,7 +221,7 @@ const PizzaCalculator = () => {
                   ))}
                 </FadeInView>
               ) : (
-                <div className="grid gap-x-[2%] grid-rows-5 gap-y-[10px] grid-cols-12 w-full h-full">
+                <div className="grid gap-x-[2%] grid-rows-5 gap-y-[10px] grid-cols-12 w-full h-full min-h-[424px]">
                   <div
                     className="col-span-12 row-span-5 -m-8 w-[calc(100%_+_40px)] h-[calc(100%_+_40px)] bg-center rounded-2xl bg-cover bg-no-repeat border"
                     style={{ backgroundImage: `url(${calculator})` }}

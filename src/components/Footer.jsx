@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { logo } from "../assets";
 import { navigation, socials } from "../constants";
 import Promo from "./Promo";
 
 const Footer = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const hideLinks = () => {
       document
@@ -41,7 +43,11 @@ const Footer = () => {
                   .map((item, index) => (
                     <li
                       key={index}
-                      className="border-b border-primary/40 leading-none text-gray-500 hover:text-black hover:border-primary transition-all duration-150 ease-in"
+                      className={`border-b border-primary/40 leading-none ${
+                        location.pathname === item.url
+                          ? "bg-primary-100 text-primary border-primary"
+                          : "text-gray-500 hover:text-black hover:border-primary"
+                      } transition-all duration-150 ease-in`}
                     >
                       <Link
                         to={item.url}
@@ -103,7 +109,11 @@ const Footer = () => {
                 <li>
                   <Link
                     to={"/contact"}
-                    className="block font-telegraf py-[0.6rem] transition-opacity duration-300 ease-in hover:text-primary"
+                    className={`block font-telegraf py-[0.6rem] transition-opacity duration-300 ease-in ${
+                      location.pathname === "/contact"
+                        ? "text-primary font-bold"
+                        : "hover:text-primary"
+                    }`}
                   >
                     Contact Me
                   </Link>

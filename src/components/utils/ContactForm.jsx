@@ -6,16 +6,20 @@ const ContactForm = ({ flexDir, isOrange = true }) => {
   const color = isOrange ? "" : "light_one";
 
   return (
-    <div className={`flex ${flexDir || "flex-row-reverse"} gap-8 mb-40`}>
+    <div
+      className={`flex flex-col ${
+        flexDir || "lg:flex-row-reverse"
+      } gap-8 mb-40`}
+    >
       <div
-        className={`w-1/2 rounded-2xl ${
+        className={`w-full lg:w-1/2 rounded-2xl ${
           isOrange ? "bg-primary" : "bg-primary-100"
         } p-3`}
       >
         <img src={someImgs_h1} className="h-full w-full rounded-xl" alt="" />
       </div>
       <div
-        className={`w-1/2 rounded-2xl ${
+        className={`w-full lg:w-1/2 rounded-2xl ${
           isOrange ? "bg-primary" : "bg-primary-100"
         } p-8`}
       >
