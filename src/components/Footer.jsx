@@ -78,11 +78,11 @@ const Footer = () => {
             <strong className="mb-7 block font-medium">
               Stay in the loop!
             </strong>
-            <p className="font-telegraf max-w-2/3 text-2xl text-primary-500 opacity-70 mb-12 lg:mb-0">
+            <p className="font-telegraf max-w-2/3 text-2xl text-primary-500 opacity-70 mb-12 lg:mb-6">
               Don’t miss out on the latest updates—follow me on social media and
               be part of the journey! Let’s stay connected!
             </p>
-            <div className="mt-auto flex mb-8">
+            <div className="mt-auto flex mb-4">
               {socials.map((item, i) => {
                 const SocialIcon = item.icon;
                 return (
@@ -96,7 +96,7 @@ const Footer = () => {
                 );
               })}
             </div>
-            <div className="mt-4">
+            <div className="mt-3">
               <ul className="text-primary-400">
                 <li>
                   <Link

@@ -5,26 +5,26 @@ import Button from "../components/utils/Button";
 import FadeInView from "../components/utils/FadeInView";
 
 const pizzaRatios = {
-  Napoletana: { salt: 3, yeast: 0.2, oil: 0, sugar: 0 },
-  Siciliana: { salt: 2, yeast: 1.5, oil: 1.5, sugar: 0 },
-  Americana: { salt: 1.5, yeast: 0.4, oil: 2.5, sugar: 2 },
-  Canotto: { salt: 3, yeast: 0.4, oil: 0, sugar: 0 },
+  Neapolitan: { salt: 3, yeast: 0.2, oil: 0, sugar: 0 },
+  Sicilian: { salt: 2, yeast: 1.5, oil: 1.5, sugar: 0 },
+  American: { salt: 1.5, yeast: 0.4, oil: 2.5, sugar: 2 },
+  Dinghy: { salt: 3, yeast: 0.4, oil: 0, sugar: 0 },
 };
 
 const defaultValues = {
-  Napoletana: { weight: 230, quantity: 65 },
-  Siciliana: { weight: 650, quantity: 75 },
-  Canotto: { weight: 240, quantity: 70 },
-  Americana: { weight: 240, quantity: 65 },
+  Neapolitan: { weight: 230, quantity: 65 },
+  Sicilian: { weight: 650, quantity: 75 },
+  Dinghy: { weight: 240, quantity: 70 },
+  American: { weight: 240, quantity: 65 },
 };
 
 const convertToDryYeast = (freshYeast) => (freshYeast / 3.29).toFixed(2);
 
 const PizzaCalculator = () => {
   const [calForm, setCalForm] = useState({
-    pizzaType: "Napoletana",
+    pizzaType: "Neapolitan",
     noOfPizza: 1,
-    ...defaultValues["Napoletana"],
+    ...defaultValues["Neapolitan"],
   });
 
   const [results, setResults] = useState({});

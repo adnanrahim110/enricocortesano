@@ -17,15 +17,20 @@ const MenuItems = () => {
               title: "Neapolitan Panzarotti",
               subtitle: "FRIED",
               img: mi1,
-              url: "/",
+              url: "/blogs/neapolitan-panzarotti",
             },
             {
               title: "Macaroni Omelette",
               subtitle: "PASTA",
               img: mi2,
-              url: "/",
+              url: "/blogs/macaroni-omelette",
             },
-            { title: "Banana Bread", subtitle: "SWEETS", img: mi3, url: "/" },
+            {
+              title: "Banana Bread",
+              subtitle: "SWEETS",
+              img: mi3,
+              url: "/blogs/banana-bread",
+            },
           ].map((item, i) => (
             <li
               key={i}
