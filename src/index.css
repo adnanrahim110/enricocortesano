@@ -59,6 +59,31 @@
     }
   }
 
+  * ::selection {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+  * ::-webkit-scrollbar {
+    width: 10px
+  }
+
+  * ::-webkit-scrollbar-track {
+    background: var(--color-primary-100);
+    border-left: 1px solid var(--color-primary-300);
+  }
+
+  * ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: var(--color-primary) var(--color-primary-100);
+    }
+  }
+
   button {
     color: inherit;
     background: 0 0;
