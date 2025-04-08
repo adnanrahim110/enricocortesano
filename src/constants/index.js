@@ -59,31 +59,31 @@ export const navigation = [
     category: [
       {
         title: 'Sauces',
-        url: '/sughi'
+        url: '/sauces'
       },
       {
         title: 'Pasta',
         url: '/pasta'
       },
       {
-        title: 'Pizza e Pane',
-        url: '/pizza-e-pane'
+        title: 'Pizza and Bread',
+        url: '/pizza-and-bread'
       },
       {
-        title: 'Piza Calcolatore',
-        url: '/pizza-calcolatore'
+        title: 'Piza Calculator',
+        url: '/pizza-calculator'
       },
       {
-        title: 'Fritto',
-        url: '/fritto'
+        title: 'Fried',
+        url: '/fried'
       },
       {
-        title: 'Dolci',
-        url: '/dolci'
+        title: 'Sweets',
+        url: '/sweets'
       },
       {
-        title: 'Riflessioni',
-        url: '/riflessioni'
+        title: 'Reflections',
+        url: '/reflections'
       }
     ]
   },
@@ -127,7 +127,7 @@ export const pressreleases = [
 export const categoriesList = [
   {
     title: 'Sauces',
-    url: '/sughi',
+    url: '/sauces',
     img: blogs_spaghetti_alla_puttanesca_1,
     rows: [
       {
@@ -137,16 +137,16 @@ export const categoriesList = [
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_spaghetti_alla_puttanesca_1],
-        text: "Questo sugo è uno dei più antichi della cucina Napoletana. Si dice che il nome derivi dal fatto che le prostitute dell'epoca lo cucinassero nell'attesa dei loro client.",
+        text: "This sauce is one of the oldest in Neapolitan cuisine. It is said that its name derives from the fact that the prostitutes of the time used to cook it while waiting for their clients.",
       },
       {
-        title: "Pasta e patate Napoletana",
-        url: "/blogs/pasta-e-patate-napoletana",
+        title: "Neapolitan pasta and potatoes",
+        url: "/blogs/neapolitan-pasta-and-potatoes",
         bgColor: "#FCF8ED",
         titleColor: "#90B679",
         textcolor: "#000",
         imgs: [blogs_pasta_e_patate_napoletana_1, blogs_pasta_e_patate_napoletana_2],
-        text: "Questa è una ricetta che si tramanda da Nonna a Madre in tutte le famigli Napoletane, quindi ogni famiglia ha la sua con piccoli cambiamenti, questa è la ricetta della miaFamigli."
+        text: "This is a recipe that has been passed down from Grandma to Mother in all Neapolitan families, so each family has its own version with small changes; this is my family's recipe."
       },
       {
         title: "genovese",
@@ -155,25 +155,25 @@ export const categoriesList = [
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_genovese_1],
-        text: "Si il nome è Genovese, mail piatto e Napoletano. Questo è il mio piatto preferito."
+        text: "Yes, the name is Genovese, mail piatto and Neapolitan. This is my favorite dish."
       },
       {
-        title: "Trenette Funghi e Piselli",
-        url: "/blogs/trenette-funghi-e-piselli",
+        title: "Trenette Mushrooms and Peas",
+        url: "/blogs/trenette-mushrooms-and-peas",
         bgColor: "#FCF8ED",
         titleColor: "#90B679",
         textcolor: "#000",
         imgs: [blogs_trenette_funghi_e_piselli_1, blogs_trenette_funghi_e_piselli_2],
-        text: "Ricetta saporitissima, con un connubio perfetto di sapori."
+        text: "Extremely flavorful recipe, with a perfect combination of flavors."
       },
       {
-        title: "Spaghetti pomodoro e basilico",
-        url: "/blogs/spaghetti-pomodoro-e-basilico",
+        title: "Spaghetti with tomato sauce and basil",
+        url: "/blogs/spaghette-with-tomato-sauce-and-basil",
         bgColor: "#C73F12",
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_spaghetti_pomodoro_e_basilico_1],
-        text: "Questo è il piatto classico della cucina napoletana."
+        text: "This is the classic dish of Neapolitan cuisine."
       }
     ]
   },
@@ -189,25 +189,25 @@ export const categoriesList = [
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_spaghetti_alla_puttanesca_1],
-        text: "Questo sugo è uno dei più antichi della cucina Napoletana. Si dice che il nome derivi dal fatto che le prostitute dell'epoca lo cucinassero nell'attesa dei loro client.",
+        text: "This sauce is one of the oldest in Neapolitan cuisine. It is said that its name derives from the fact that the prostitutes of the time used to cook it while waiting for their clients.",
       },
       {
-        title: "Pasta e patate Napoletana",
-        url: "/blogs/pasta-e-patate-napoletana",
+        title: "Neapolitan pasta and potatoes",
+        url: "/blogs/neapolitan-pasta-and-potatoes",
         bgColor: "#FCF8ED",
         titleColor: "#90B679",
         textcolor: "#000",
         imgs: [blogs_pasta_e_patate_napoletana_1, blogs_pasta_e_patate_napoletana_2],
-        text: "Questa è una ricetta che si tramanda da Nonna a Madre in tutte le famigli Napoletane, quindi ogni famiglia ha la sua con piccoli cambiamenti, questa è la ricetta della miaFamigli."
+        text: "This is a recipe that has been passed down from Grandma to Mother in all Neapolitan families, so each family has its own version with small changes; this is my family's recipe."
       },
       {
-        title: "Trenette Funghi e Piselli",
-        url: "/blogs/trenette-funghi-e-piselli",
+        title: "Trenette Mushrooms and Peas",
+        url: "/blogs/trenette-mushrooms-and-peas",
         bgColor: "#4BD1A0",
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_trenette_funghi_e_piselli_1],
-        text: "Ricetta saporitissima, con un connubio perfetto di sapori."
+        text: "Extremely flavorful recipe, with a perfect combination of flavors."
       },
       {
         title: "genovese",
@@ -216,50 +216,50 @@ export const categoriesList = [
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_genovese_1, blogs_genovese_2],
-        text: "Si il nome è Genovese, mail piatto e Napoletano. Questo è il mio piatto preferito."
+        text: "Yes, the name is Genovese, mail piatto and Neapolitan. This is my favorite dish."
       },
       {
-        title: "FRITTATA DI MACCHERONI",
-        url: "/blogs/frittata-di-macheroni",
+        title: "MACARONI OMELETTE",
+        url: "/blogs/macaroni-omelette",
         bgColor: "#DEB940",
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_frittata_di_maccheroni_1],
-        text: "Questa è una delle tante ricette Napoletane che si utilizzava anche per svuotare il frigo dalle piccole rimanenze e questo gli da ogni volta un sapore diverso."
+        text: "This is one of the many Neapolitan recipes that was also used to empty the fridge of small leftovers, and this gives it a different flavor every time."
       },
       {
-        title: "Spaghetti pomodoro e basilico",
-        url: "/blogs/spaghetti-pomodoro-e-basilico",
+        title: "Spaghetti with tomato sauce and basil",
+        url: "/blogs/spaghette-with-tomato-sauce-and-basil",
         bgColor: "#C73F12",
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_spaghetti_pomodoro_e_basilico_1, blogs_spaghetti_pomodoro_e_basilico_2],
-        text: "Questo è il piatto classico della cucina napoletana."
+        text: "This is the classic dish of Neapolitan cuisine."
       }
     ]
   },
   {
     title: 'Pizza e Pane',
-    url: '/pizza-e-pane',
+    url: '/pizza-and-bread',
     img: blogs_come_fare_una_pizza_napoletana_6,
     rows: [
       {
-        title: "come fare una pizza napoletana",
-        url: "/blogs/come-fare-una-pizza-napoletana",
+        title: "How to make a Neapolitan pizza",
+        url: "/blogs/how-to-make-a-neapolitan-pizza",
         bgColor: "#FCF8ED",
         titleColor: "#FF4040",
         textcolor: "#000",
         imgs: [blogs_come_fare_una_pizza_napoletana_1, blogs_come_fare_una_pizza_napoletana_2],
-        text: "Per fare una pizza Napoletana originale sono necessarie alcune cose, prima di tutto il forno, logicamente l'ideale sarebbe un forno a legna."
+        text: "To make an original Neapolitan pizza you need a few things, first of all the oven, logically the ideal would be a wood-fired oven."
       },
       {
-        title: "Pane Rustico in Dutch oven",
-        url: "/blogs/pan-rustico-in-dutch-oven",
+        title: "Rustic Bread in Dutch Oven",
+        url: "/blogs/rustic-bread-in-dutch-oven",
         bgColor: "#4BD1A0",
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_l_arte_del_pane_6],
-        text: "Ricetta per avere un pane fragrante ed una crosta croccante ogni giorno."
+        text: "Recipe for fragrant bread and a crunchy crust every day."
       },
       {
         title: "FRENCH BAGUETTE",
@@ -268,48 +268,48 @@ export const categoriesList = [
         titleColor: "#852A0C",
         textcolor: "#000",
         imgs: [blogs_french_baguette_1, blogs_french_baguette_2],
-        text: "French Baguette saporitissime, crosta croccante e mollica morbida e saporita."
+        text: "Very tasty French Baguette, crunchy crust and soft and tasty crumb."
       },
       {
-        title: "Tortano napoletano",
-        subtitle: "Il Tortano tipica ciambella della tradizione Napoletana per le feste di Pasqua.",
-        url: "/blogs/tortano-napoletano",
+        title: "Neapolitan Tortano",
+        subtitle: "Tortano is a typical Neapolitan traditional donut for Easter holidays.",
+        url: "/blogs/neapolitan-tortano",
         bgColor: "#DEB940",
         titleColor: "#852A0C",
         textcolor: "#000",
         imgs: [blogs_tortano_napoletano_1],
-        text: "Prima di tutto dobbiamo fare delle precisazioni per poter differenziare il Tortano dal Casatiello, è inutile dirvi che in ogni famiglia Napoletana c'è la propria ricetta rimandata da madre in figlia, con piccole varianti, ma la base è la stessa, per tutte e due le torte rustiche ci sono gli stessi ingredienti, ma nel casatiello di solito si mettono tra i vari ingredienti i cicoli e vengono inserite delle uova crude incatenate con una croce di pasta in superficie."
+        text: "First of all we need to make some clarifications to be able to differentiate Tortano from Casatiello, it is useless to tell you that in every Neapolitan family there is their own recipe passed down from mother to daughter, with small variations, but the base is the same, for both rustic cakes there are the same ingredients, but in the casatiello usually the cracklings are placed between the various ingredients and raw eggs are inserted chained with a cross of pasta on the surface."
       }
     ]
   },
   {
-    title: 'Fritto',
-    url: '/fritto',
+    title: 'Fried',
+    url: '/fried',
     img: categories_fritto_1,
     rows: [
       {
-        title: "panzarotti napoletani",
-        url: "/blogs/panzarotti-napoletani",
+        title: "Neapolitan panzarotti",
+        url: "/blogs/neapolitan-panzarotti",
         bgColor: "#FCF8ED",
         titleColor: "#852A0C",
         textcolor: "#000",
         imgs: [blogs_panzarotti_napoletani_1, blogs_panzarotti_napoletani_2],
-        text: "Questa è la mia ricetta dei panzarotti Napoletani, ricordate sarà molto difficile trovare una ricetta unica dei panzarotti Napoletani, questo perché è una di quelle ricette che le nostre madri e nonne usavano per utilizzare le piccole rimanenze nel frigo e ripulirlo, in più ogni famiglia ha la sua ricetta, in ogni caso questa è la base."
+        text: "This is my recipe for Neapolitan panzarotti, remember it will be very difficult to find a unique recipe for Neapolitan panzarotti, this is because it is one of those recipes that our mothers and grandmothers used to use up the small leftovers in the fridge and clean it out, plus every family has its own recipe, in any case this is the base."
       },
       {
-        title: "FRITTATA DI MACCHERONI",
-        url: "/blogs/frittata-di-macheroni",
+        title: "MACARONI OMELETTE",
+        url: "/blogs/macaroni-omelette",
         bgColor: "#4BD1A0",
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_frittata_di_maccheroni_1],
-        text: "Questa è una delle tante ricette Napoletane che si utilizzava anche per svuotare il frigo dalle piccole rimanenze e questo gli da ogni volta un sapore diverso."
+        text: "This is one of the many Neapolitan recipes that was also used to empty the fridge of small leftovers, and this gives it a different flavor every time."
       }
     ]
   },
   {
-    title: 'Dolci',
-    url: '/dolci',
+    title: 'Sweets',
+    url: '/sweets',
     img: categories_dolci_1,
     rows: [
       {
@@ -319,64 +319,64 @@ export const categoriesList = [
         titleColor: "#ffffff",
         textcolor: "#000",
         imgs: [blogs_banana_bread_1],
-        text: "Ricetta di un tipico dolce Americano buono con la colazione del mattino."
+        text: "Recipe for a typical American dessert good for breakfast in the morning."
       },
       {
-        title: "Pastiera Napoletana",
-        url: "/blogs/la-pastiera-napoletana",
+        title: "The Neapolitan Pastiera",
+        url: "/blogs/the-neapolitan-pastiera",
         bgColor: "#FCF8ED",
         titleColor: "#BC9B5D",
         textcolor: "#000",
         imgs: [blogs_la_pastiera_napoletana_1, blogs_la_pastiera_napoletana_2],
-        text: "La Pastiera è il dolce napoletano per eccellenza e nonostante sia tipico della Pasqua. Le sue origini sono antichissime, e si fanno risalire al tempo dei romani, quando le sacerdotesse portavano in processione al tempio di Cerere, le offerte dei contadini, la ricotta, il grano, le uova…. Successivamente a questi elementi combinati insieme, venne aggiunto il profumo dei fiori di arancio, di cui gli alberi sono carichi in primavera, essenza che caratterizza la pastiera e la rende inconfondibile."
+        text: "Pastiera is the Neapolitan dessert par excellence and despite being typical of Easter. Its origins are very ancient, and date back to Roman times, when the priestesses carried in procession to the temple of Ceres, the offerings of the farmers, ricotta, wheat, eggs .... Subsequently to these elements combined together, the scent of orange blossoms was added, which the trees are full of in spring, an essence that characterizes the pastiera and makes it unmistakable."
       }
     ]
   },
   {
-    title: 'Riflessioni',
-    url: '/riflessioni',
+    title: 'Reflections',
+    url: '/reflections',
     img: categories_riflessioni_1,
   }
 ];
 
 export const riflessioniContent = [
   {
-    title: "FRESCO",
+    title: "FRESH",
     img: categories_riflessioni_3,
     text: [
-      "Fresco negli Stati Uniti è una definizione strana, un pesce fresco in Italia è una definizione precisa, in Italia un pesce quando si muove è fresco, oppure si può dedurre dall'occhio, deve essere molto vivo, brillante, bombato, turgido e non incavato.",
-      "Negli Stati Uniti fresco forse significa che è conservato nel ghiaccio quindi e freso, inoltre la maggior parte delle volte è senza testa quindi non si può neanche immaginare la sua freschezza.",
-      "Non parliamo dei frutti di mare, vongole e cozze vendute congelate, quindi il frutto interno è morto e la cosa più assurda, per chi cucina gli è molto difficile pulirli dalla sabbia per poterli cucinare.",
+      "Fresh in the United States is a strange definition, a fresh fish in Italy is a precise definition, in Italy a fish when it moves is fresh, or you can deduce it from the eye, it must be very alive, shiny, rounded, turgid and not hollow.",
+      "In the United States fresh perhaps means that it is preserved in ice so it is fresh, also most of the time it is without a head so you can't even imagine its freshness.",
+      "Let's not talk about seafood, clams and mussels sold frozen, so the internal fruit is dead and the most absurd thing, for those who cook it is very difficult to clean them from the sand in order to cook them.",
     ],
   },
   {
-    title: "PANE",
+    title: "BREAD",
     img: blogs_l_arte_del_pane_4,
     text: [
-      "Quale magnifica sensazione che noi Italiani abbiamo nelle vicinanze o all'interno di una panetteria, quel profumo di pane sfornato, le tante varietà di pane fragrante.",
-      "Negli Stati Uniti questo non avviene: il pane è inodore, chiuso in buste di plastica e si mantiene morbido per giorni, chi sa come mai!",
-      "Qui negli Stati Uniti non esistono panetterie, quindi il pane si compra nei supermercati; negli ultimi tempi si trovano anche pani all'Europa come ciabatta, pane Toscano etc. etc. Sono di forma diversa ma il sapore è sempre lo stesso: se chiedi spiegazioni a qualcuno, la loro risposta è che loro lo fanno così e, se gli chiedi se usano il lievito madre, ti ridono in faccia perché non capiscono di cosa stai parlando. Se vedete questo pane, non è lievitato, non ha alveoli all'interno, ma il pane più imitato e maltrattato è la baguette francese: è un lungo panino flaccido, non croccante e con il sapore dell'altro pane.",
-      "Io capisco che la maggior parte degli Americani è ignorante in materia alimentare, quindi nessuno andrà mai a lamentarsi perché poverini non hanno un metro di paragone; come possono dire che un pane non è buono se non sanno a quale compararlo?",
+      "What a wonderful feeling we Italians have in the vicinity or inside a bakery, that smell of baked bread, the many varieties of fragrant bread.",
+      "In the United States this does not happen: the bread is odorless, closed in plastic bags and stays soft for days, who knows why!",
+      "Here in the United States there are no bakeries, so bread is bought in supermarkets; lately you can also find European breads like ciabatta, Tuscan bread etc. etc. They have different shapes but the flavor is always the same: if you ask someone for explanations, their answer is that they do it like this and, if you ask them if they use sourdough, they laugh in your face because they don't understand what you're talking about. If you see this bread, it is not leavened, it has no alveoli inside, but the most imitated and mistreated bread is the French baguette: it is a long flaccid roll, not crunchy and with the flavor of other bread.",
+      "I understand that most Americans are ignorant in food matter, so no one will ever complain because the poor things have no yardstick; how can they say that a bread is not good if they don't know what to compare it to?"
     ],
   },
   {
-    title: "PASTA PER LA PIZZA",
+    title: "PIZZA DOUGH",
     img: categories_riflessioni_4,
     text: [
-      "Come vi ho già detto, io non sono un cuoco e non ho fatto mai nessun corso di cucina, ma la mia scuola è stata la cucina di casa mia.",
-      "Quindi ho cominciato a cucinare dopo i trenta anni, ma negli ultimi anni ho cominciato ad approfondire e studiare con l'aiuto di testi antichi, per trovare ricette originali e anche dei cuochi contemporanei, come il grande Gualtiero Marchesi, la cui cucina ha sfornato molti allievi che sono diventati cuochi famosi.",
-      'Per quanto riguarda la pizza Napoletana voglio farvi una premessa a riguardo delle dosi: le dosi che vedete nella ricetta sono quelle originali del Disciplinare della "Associazione Verace Pizza Napoletana", ma le dosi dipendono da tante cose, dal tipo di farina, dall\'umidità del locale dove lavorerete la pasta; inoltre ogni lievito da marca a marca dà risultati diversi. Quindi armatevi di tanta pazienza e fate tante prove finché non avrete la ricetta giusta, questo è il bello della cucina.',
-      "Per quanto riguarda la pizza, il grande aiuto che ho avuto sono stati i video postati su YouTube da grandi pizzaioli, ma anche da meno noti come me, che per consigli e varie esperienze mi hanno aiutato non solo per le dosi ma anche con la manipolazione, che forse è la cosa più difficile da capire senza un'esperienza diretta. Per questo ho deciso di fare un video in modo che riassuma tutti i piccoli trucchi per fare una pizza PERFETTA da incantare i vostri commensali.",
+      "As I have already told you, I am not a chef and I have never taken any cooking courses, but my school was my home kitchen.",
+      "So I started cooking after I turned thirty, but in recent years I have begun to delve deeper and study with the help of ancient texts, to find original recipes and also contemporary chefs, such as the great Gualtiero Marchesi, whose cuisine has produced many students who have become famous chefs.",
+      'As for Neapolitan pizza, I want to make a premise regarding the doses: the doses you see in the recipe are the original ones of the Disciplinary of the "Associazione Verace Pizza Napoletana", but the doses depend on many things, the type of flour, the humidity of the room where you will work the dough; furthermore, each yeast from brand to brand gives different results. So arm yourself with a lot of patience and do a lot of tests until you have the right recipe, this is the beauty of cooking.',
+      "As for pizza, the great help I had were the videos posted on YouTube by great pizza chefs, but also by lesser-known people like me, who with advice and various experiences helped me not only with the doses but also with the manipulation, which is perhaps the most difficult thing to understand without direct experience. For this reason I decided to make a video so that it summarizes all the little tricks to make a PERFECT pizza to enchant your guests.",
     ],
   },
 ];
 
 export const blogs = [
   {
-    title: "La Pastiera Napoletana",
-    url: "/blogs/la-pastiera-napoletana",
+    title: "The Neapolitan Pastiera",
+    url: "/blogs/the-neapolitan-pastiera",
     date: "12 April, 2020",
-    category: "dolci",
+    category: "sweets",
     imgTop: [blogs_la_pastiera_napoletana_1],
     imgR2: [blogs_la_pastiera_napoletana_2, blogs_la_pastiera_napoletana_3],
     imgs: [
@@ -430,7 +430,7 @@ export const blogs = [
     title: "Banana Bread",
     url: "/blogs/banana-bread",
     date: "27 Feb, 2020",
-    category: "dolci",
+    category: "sweets",
     imgTop: [blogs_banana_bread_1],
     imgR2: [blogs_banana_bread_2],
     imgs: [blogs_banana_bread_3],
@@ -469,10 +469,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Panzarotti Napoletani",
-    url: "/blogs/panzarotti-napoletani",
+    title: "Neapolitan Panzarotti",
+    url: "/blogs/neapolitan-panzarotti",
     date: "27 Feb, 2020",
-    category: "fritto",
+    category: "fried",
     imgTop: [blogs_panzarotti_napoletani_1],
     imgR2: [blogs_panzarotti_napoletani_2],
     imgs: [blogs_panzarotti_napoletani_3],
@@ -519,10 +519,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Frittata di maccheroni",
-    url: "/blogs/frittata-di-maccheroni",
+    title: "Macaroni omelette",
+    url: "/blogs/macaroni-omelette",
     date: "27 Feb, 2020",
-    category: "pasta , fritto",
+    category: "pasta, fried",
     imgTop: [blogs_frittata_di_maccheroni_1],
     imgR2: [blogs_frittata_di_maccheroni_2],
     imgs: [blogs_frittata_di_maccheroni_3],
@@ -561,10 +561,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Tortano Napoletano",
-    url: "/blogs/tortano-napoletano",
+    title: "Neapolitan Tortano",
+    url: "/blogs/neapolitan-tortano",
     date: "9 April, 2020",
-    category: "pizza-e-pane",
+    category: "pizza and bread",
     imgTop: [blogs_tortano_napoletano_1],
     imgR2: [blogs_tortano_napoletano_2, blogs_tortano_napoletano_3, blogs_tortano_napoletano_4],
     imgs: [blogs_tortano_napoletano_5, blogs_tortano_napoletano_6, blogs_tortano_napoletano_7, blogs_tortano_napoletano_8],
@@ -596,10 +596,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Calzone, pizza ripiena Napoletana - Calzone, Neapolitan stuffed pizza",
-    url: "/blogs/clazone-pizza-ripiena-napoletana",
+    title: "Calzone, Neapolitan stuffed pizza",
+    url: "/blogs/calzone-neapolitan-stuffed-pizza",
     date: "5 April, 2020",
-    category: "pizza-e-pane",
+    category: "pizza and bread",
     imgTop: false,
     embedLink: "https://www.youtube.com/embed/FfKzZ81U6rQ",
     embedTitle: "Calzone Napoletano",
@@ -614,7 +614,7 @@ export const blogs = [
     title: "French Baguette",
     url: "/blogs/french-baguette",
     date: "10 March, 2020",
-    category: "pizza-e-pane",
+    category: "pizza and bread",
     imgTop: [blogs_french_baguette_1],
     imgR2: [blogs_french_baguette_2, blogs_french_baguette_3],
     imgs: [blogs_french_baguette_4, blogs_french_baguette_5, blogs_french_baguette_6, blogs_french_baguette_7, blogs_french_baguette_8],
@@ -634,7 +634,7 @@ export const blogs = [
           "Everything seems very simple, but it takes precise movements of the pasta to incorporate the air well, this will give the alveoli you see in the photos and a lightness to the baguette.  I am preparing videos with which you will be able to understand what the essential techniques are to make good bread in general, I will warn you."
         ],
         [
-          "`La vita è come il pane: col trascorrere del tempo diventa più dura, ma quanto meno ne resta tanto più la si apprezza.`"
+          "`Life is like bread: as time goes by it becomes harder, but the less of it remains the more you appreciate it.`"
         ],
         ["'Indro Montanelli'"]
       ],
@@ -649,10 +649,10 @@ export const blogs = [
     ]
   },
   {
-    title: "L'Arte del Pane! - The Art of Bread!",
-    url: "/blogs/l-arte-del-pane",
+    title: "The Art of Bread!",
+    url: "/blogs/the-art-of-bread",
     date: "10 March, 2020",
-    category: "pizza-e-pane",
+    category: "pizza and bread",
     imgTop: [
       blogs_l_arte_del_pane_1, blogs_l_arte_del_pane_2, blogs_l_arte_del_pane_3, blogs_l_arte_del_pane_4, blogs_l_arte_del_pane_5, blogs_l_arte_del_pane_6, blogs_l_arte_del_pane_7, blogs_l_arte_del_pane_8, blogs_l_arte_del_pane_9
     ],
@@ -675,10 +675,10 @@ export const blogs = [
       ],
   },
   {
-    title: "Come fare una pizza Napoletana - How to make a Neapolitan pizza.",
-    url: "/blogs/come-fare-una-pizza-napoletana",
+    title: "How to make a Neapolitan pizza",
+    url: "/blogs/how-to-make-a-neapolitan-pizza",
     date: "28 Feb, 2020",
-    category: "pizza-e-pane",
+    category: "pizza and bread",
     imgTop: [blogs_come_fare_una_pizza_napoletana_1,],
     imgR2: [blogs_come_fare_una_pizza_napoletana_2,],
     imgs: [blogs_come_fare_una_pizza_napoletana_3, blogs_come_fare_una_pizza_napoletana_4, blogs_come_fare_una_pizza_napoletana_5],
@@ -719,10 +719,10 @@ export const blogs = [
       ],
   },
   {
-    title: "Pane Rustico in Dutch oven",
-    url: "/blogs/pan-rustico-in-dutch-oven",
+    title: "Rustic Bread in Dutch Oven",
+    url: "/blogs/rustic-bread-in-dutch-oven",
     date: "27 Feb, 2020",
-    category: "pizza-e-pane",
+    category: "pizza and bread",
     imgTop: [blogs_l_arte_del_pane_10],
     imgR2: [blogs_l_arte_del_pane_1],
     imgs: [blogs_pane_rustico_in_dutch_oven_1, blogs_pane_rustico_in_dutch_oven_2],
@@ -757,10 +757,9 @@ export const blogs = [
     title: "Spaghetti alla Puttanesca",
     url: "/blogs/spaghetti-alla-puttanesca",
     date: "29 Feb, 2020",
-    category: "pasta , sughi",
+    category: "pasta, sauces",
     imgTop: [blogs_spaghetti_alla_puttanesca_1],
-    imgR2: [blogs_spaghetti_alla_puttanesca_2],
-    imgLast: [blogs_spaghetti_alla_puttanesca_3],
+    imgLast: [blogs_spaghetti_alla_puttanesca_2, blogs_spaghetti_alla_puttanesca_3],
     text:
       [
         [
@@ -782,10 +781,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Pasta e patate Napoletana - Neapolitan pasta and potatoes",
-    url: "/blogs/pasta-e-patate-napoletana",
+    title: "Neapolitan pasta and potatoes",
+    url: "/blogs/neapolitan-pasta-and-potatoes",
     date: "27 Feb, 2020",
-    category: "pasta , sughi",
+    category: "pasta, sauces",
     imgTop: [blogs_pasta_e_patate_napoletana_1],
     imgR2: [blogs_pasta_e_patate_napoletana_2],
     text:
@@ -811,7 +810,7 @@ export const blogs = [
     title: "Genovese",
     url: "/blogs/genovese",
     date: "27 Feb, 2020",
-    category: "pasta , sughi",
+    category: "pasta, sauces",
     imgTop: [blogs_genovese_1],
     imgR2: [blogs_genovese_2],
     imgLast: [blogs_genovese_3],
@@ -837,10 +836,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Trenette Funghi e Piselli - Trenette Mushrooms and Peas",
-    url: "/blogs/trenette-funghi-e-piselli",
+    title: "Trenette Mushrooms and Peas",
+    url: "/blogs/trenette-mushrooms-and-peas",
     date: "27 Feb, 2020",
-    category: "pasta , sughi",
+    category: "pasta, sauces",
     imgTop: [blogs_trenette_funghi_e_piselli_1],
     imgLast: [blogs_trenette_funghi_e_piselli_2, blogs_trenette_funghi_e_piselli_3, blogs_trenette_funghi_e_piselli_4],
     text:
@@ -859,10 +858,10 @@ export const blogs = [
     ]
   },
   {
-    title: "Spaghetti pomodoro e basilico - Spaghetti with tomato sauce and basil",
-    url: "/blogs/spaghetti-pomodora-e-basilico",
+    title: "Spaghetti with tomato sauce and basil",
+    url: "/blogs/spaghette-with-tomato-sauce-and-basil",
     date: "27 Feb, 2020",
-    category: "pasta , sughi",
+    category: "pasta, sauces",
     imgTop: [blogs_spaghetti_pomodoro_e_basilico_1],
     imgR2: [blogs_spaghetti_pomodoro_e_basilico_2],
     imgs: [blogs_spaghetti_pomodoro_e_basilico_3],

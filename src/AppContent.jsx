@@ -81,9 +81,9 @@ const AppContent = () => {
           <Route path="/blogs/:blogName" element={<Blog />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path="/pizza-calcolatore" element={<PizzaCalculator />} />
+          <Route path="/pizza-calculator" element={<PizzaCalculator />} />
           <Route path="/:categoryId" element={<Category />} />
-          <Route path="/riflessioni" element={<Riflessioni />} />
+          <Route path="/reflections" element={<Riflessioni />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

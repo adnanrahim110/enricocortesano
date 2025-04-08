@@ -18,7 +18,7 @@ const Promo = () => {
               sauce reflects the legacy of tradition, and every bite is a
               celebration of passion, skill, and the art of flavor in a pizza.
             </h3>
-            <Button children={"Calculate Pizza"} href={"/pizza-calcolatore"} />
+            <Button children={"Calculate Pizza"} href={"/pizza-calculator"} />
           </div>
           <div className="hidden md:block h-full w-full lg:w-[35%] ml-auto mr-40 relative max-2lg:mr-12">
             <img

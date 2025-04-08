@@ -1,7 +1,7 @@
 export { default as amz } from './images/amz.png';
 export { default as amz1 } from './images/amz1.png';
-export { default as audio_1 } from './images/audio/1.wav';
 export { default as audio } from './images/audio.webp';
+export { default as audio_1 } from './images/audio/1.wav';
 export { default as author_1 } from './images/author/1.avif';
 export { default as author_2 } from './images/author/2.avif';
 export { default as author_3 } from './images/author/3.jpg';
@@ -97,13 +97,13 @@ export { default as cal } from './images/cal.jpg';
 export { default as cal2 } from './images/cal2.jpg';
 export { default as calculator } from './images/calculator.jpg';
 export { default as calculatorBg } from './images/calculatorBg.png';
+export { default as categories } from './images/categories.png';
 export { default as categories_dolci_1 } from './images/categories/dolci/1.jpeg';
 export { default as categories_fritto_1 } from './images/categories/fritto/1.png';
 export { default as categories_riflessioni_1 } from './images/categories/riflessioni/1.jpg';
 export { default as categories_riflessioni_2 } from './images/categories/riflessioni/2.jpeg';
 export { default as categories_riflessioni_3 } from './images/categories/riflessioni/3.jpg';
 export { default as categories_riflessioni_4 } from './images/categories/riflessioni/4.jpg';
-export { default as categories } from './images/categories.png';
 export { default as coverDisplay } from './images/coverDisplay.png';
 export { default as eye_bg } from './images/eye-bg.png';
 export { default as flour } from './images/flour.png';
@@ -147,3 +147,4 @@ export { default as videos_instagram_promo } from './images/videos/instagram-pro
 export { default as water } from './images/water.png';
 export { default as yeast } from './images/yeast.png';
 export { default as youtube } from './images/youtube.png';
+
