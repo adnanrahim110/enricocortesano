@@ -44,12 +44,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col w-full lg:w-[33.33%] px-8 border-x border-b border-primary-400">
-            <div className="h-full max-h-[400px] overflow-hidden -mx-8">
+            <div className="max-h-[400px] overflow-hidden -mx-8">
               <iframe
                 src="https://feed.mikle.com/widget/v2/172245/?preloader-text=Loading&"
                 height="420px"
                 width="100%"
-                className="fw-iframe max-h-full"
+                className="fw-iframe"
               ></iframe>
             </div>
           </div>
