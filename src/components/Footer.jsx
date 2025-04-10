@@ -7,23 +7,6 @@ import Promo from "./Promo";
 const Footer = () => {
   const location = useLocation();
 
-  useEffect(() => {
-    const hideLinks = () => {
-      document
-        .querySelectorAll(
-          'a[href="https://elfsight.com/youtube-channel-plugin-yottie/?utm_source=websites&utm_medium=clients&utm_content=yottie&utm_term=localhost&utm_campaign=free-widget"]'
-        )
-        .forEach((el) => (el.style.display = "none"));
-    };
-
-    hideLinks();
-
-    const observer = new MutationObserver(hideLinks);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect(); // Cleanup on unmount
-  }, []);
-
   return (
     <footer>
       <Promo />
@@ -61,17 +44,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col w-full lg:w-[33.33%] px-8 border-x border-b border-primary-400">
-            <div className="max-h-[400px] overflow-hidden -mx-8">
-              <div className="overflow-x-hidden overflow-y-auto h-full sb_xs">
-                <script
-                  src="https://static.elfsight.com/platform/platform.js"
-                  async
-                ></script>
-                <div
-                  className="elfsight-app-486a974f-4835-4ee9-a59d-ea794095d772"
-                  data-elfsight-app-lazy
-                ></div>
-              </div>
+            <div className="h-full max-h-[400px] overflow-hidden -mx-8">
+              <iframe
+                src="https://feed.mikle.com/widget/v2/172245/?preloader-text=Loading&"
+                height="420px"
+                width="100%"
+                className="fw-iframe max-h-full"
+              ></iframe>
             </div>
           </div>
           <div className="flex flex-col w-full lg:w-[33.33%] px-8 border-x lg:border-l-0 lg:border-r border-primary-400 pt-12">

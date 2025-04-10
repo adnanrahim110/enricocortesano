@@ -1,33 +1,15 @@
-import React, { useEffect } from "react";
-
 const Videos = () => {
-  useEffect(() => {
-    const hideLinks = () => {
-      document
-        .querySelectorAll(
-          'a[href="https://elfsight.com/youtube-channel-plugin-yottie/?utm_source=websites&utm_medium=clients&utm_content=yottie&utm_term=localhost&utm_campaign=free-widget"]'
-        )
-        .forEach((el) => (el.style.display = "none"));
-    };
-
-    hideLinks();
-
-    const observer = new MutationObserver(hideLinks);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
-  }, []);
   return (
     <>
       <div className="container xl">
-        <script
-          src="https://static.elfsight.com/platform/platform.js"
-          async
-        ></script>
-        <div
-          class="elfsight-app-d402f4f4-7cf1-469c-9280-7e6aefc78636"
-          data-elfsight-app-lazy
-        ></div>
+        <div className="pt-40">
+          <iframe
+            src="https://feed.mikle.com/widget/v2/172243/?preloader-text=Loading&"
+            height="662px"
+            width="100%"
+            className="fw-iframe"
+          ></iframe>
+        </div>
       </div>
     </>
   );
